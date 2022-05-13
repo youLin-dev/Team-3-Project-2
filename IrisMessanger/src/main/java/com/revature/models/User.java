@@ -20,17 +20,37 @@ public class User {
 	
 	@Column(nullable = false)
 	private String pass_word;
+	
+	@Column
+	private String first_name;
+	@Column
+	private String last_name;
+	@Column(unique = true)
+	private String phone_number;
 
 	public User() {
 		super();
 	}
 
-	//these two constructors and the toString() will need to be regenerated in the future if more fields are added
-	public User(int user_id, String username, String pass_word) {
+	//these methods will need to be regenerated if fields are eddited
+	public User(int user_id, String username, String pass_word, String first_name, String last_name,
+			String phone_number) {
 		super();
 		this.user_id = user_id;
 		this.username = username;
 		this.pass_word = pass_word;
+		this.first_name = first_name;
+		this.last_name = last_name;
+		this.phone_number = phone_number;
+	}
+
+	public User(String username, String pass_word, String first_name, String last_name, String phone_number) {
+		super();
+		this.username = username;
+		this.pass_word = pass_word;
+		this.first_name = first_name;
+		this.last_name = last_name;
+		this.phone_number = phone_number;
 	}
 
 	public User(String username, String pass_word) {
@@ -41,7 +61,57 @@ public class User {
 
 	@Override
 	public String toString() {
-		return "User [user_id=" + user_id + ", username=" + username + ", pass_word=" + pass_word + "]";
+		return "User [user_id=" + user_id + ", username=" + username + ", pass_word=" + pass_word + ", first_name="
+				+ first_name + ", last_name=" + last_name + ", phone_number=" + phone_number + "]";
+	}
+	
+
+	public int getUser_id() {
+		return user_id;
+	}
+
+	public void setUser_id(int user_id) {
+		this.user_id = user_id;
+	}
+
+	public String getUsername() {
+		return username;
+	}
+
+	public void setUsername(String username) {
+		this.username = username;
+	}
+
+	public String getPass_word() {
+		return pass_word;
+	}
+
+	public void setPass_word(String pass_word) {
+		this.pass_word = pass_word;
+	}
+
+	public String getFirst_name() {
+		return first_name;
+	}
+
+	public void setFirst_name(String first_name) {
+		this.first_name = first_name;
+	}
+
+	public String getLast_name() {
+		return last_name;
+	}
+
+	public void setLast_name(String last_name) {
+		this.last_name = last_name;
+	}
+
+	public String getPhone_number() {
+		return phone_number;
+	}
+
+	public void setPhone_number(String phone_number) {
+		this.phone_number = phone_number;
 	}
 	
 	

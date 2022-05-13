@@ -8,26 +8,39 @@ import org.hibernate.Session;
 import org.hibernate.criterion.Restrictions;
 import java.util.List;
 
+import javax.persistence.Query;
+
 public class UserDao {
+	/**
+	 * Adds given user to the users table
+	 * */
 	public void createUser(User user) {
 		Session ses = HibernateUtil.getSession();
 		ses.save(user);
 		HibernateUtil.closeSession();
+		System.out.println("-- "+user+" added to database");
 	}
 	
-	//ben hasnt gone over how to do this so i looked this up
-	//this might not work
+	/**
+	 * 
+	 * @param username
+	 * @return user object with matching username
+	 */
 	public User getUserbyUsername(String username) {
 		Session ses = HibernateUtil.getSession();
-		Criteria crit = ses.createCriteria(User.class);
-		crit.add(Restrictions.eq("username",username));
-		List<User> u = crit.list();
+		Query q = ses.createQuery("FROM User m WHERE m.username = ?0");
+		q.setParameter(0, username);
+		List<User> u = q.getResultList();
 		HibernateUtil.closeSession();
 		return u.get(0);
 		
 		
 	}
-	
+	/**
+	 * 
+	 * @param id
+	 * @return user object with matching user_id
+	 */
 	public User getUserById(int id) {
 		Session ses = HibernateUtil.getSession();
 		User u =ses.get(User.class, id);
