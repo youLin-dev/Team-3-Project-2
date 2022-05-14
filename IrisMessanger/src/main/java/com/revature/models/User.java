@@ -25,7 +25,7 @@ public class User {
 	private String first_name;
 	@Column
 	private String last_name;
-	@Column(unique = true)
+	@Column(unique = true, nullable = false, length = 12)
 	private String phone_number;
 
 	public User() {
@@ -53,10 +53,11 @@ public class User {
 		this.phone_number = phone_number;
 	}
 
-	public User(String username, String pass_word) {
+	public User(String username, String pass_word, String phone_number) {
 		super();
 		this.username = username;
 		this.pass_word = pass_word;
+		this.phone_number = phone_number;
 	}
 
 	@Override
