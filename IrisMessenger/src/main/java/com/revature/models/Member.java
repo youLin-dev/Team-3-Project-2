@@ -30,7 +30,7 @@ public class Member {
 	private User user_fk;
 	
 	@ManyToOne(fetch = FetchType.EAGER, cascade=CascadeType.ALL)
-	@JoinColumn(name = "user_id")
+	@JoinColumn(name = "chat_id")
 	private Chat chat_fk;
 
 	public Member() {
