@@ -1,9 +1,12 @@
 create table contact (
 	contact_id serial primary key,
+	user_name varchar(15),
+	pass_code varchar (60),
 	first_name varchar(30),
 	last_name varchar(30),
+	user_bio varchar(150),
 	profile_photo bytea,
-	phone_number char(10)
+	phone_number char(10) unique
 );
 
 
@@ -41,4 +44,4 @@ select * from contact;
 --alter table contact add phone_number varchar(10);
 --update contact set phone_number = '3150566666' where contact_id = 2;
 
---drop table contact, chat, group_member, message;
+drop table contact, chat, group_member, message;

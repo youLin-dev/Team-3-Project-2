@@ -1,0 +1,56 @@
+{
+	"folders": {},
+	"connections": {
+		"postgres-jdbc-180d054b98d-583cbf48836737ab": {
+			"provider": "postgresql",
+			"driver": "postgres-jdbc",
+			"name": "postgres",
+			"save-password": true,
+			"read-only": false,
+			"configuration": {
+				"host": "localhost",
+				"port": "5432",
+				"database": "postgres",
+				"url": "jdbc:postgresql://localhost:5432/postgres",
+				"home": "postgresql-x64-14",
+				"type": "dev",
+				"provider-properties": {
+					"@dbeaver-show-non-default-db@": "false",
+					"@dbeaver-show-template-db@": "false",
+					"@dbeaver-show-unavailable-db@": "false",
+					"show-database-statistics": "false",
+					"@dbeaver-read-all-data-types-db@": "false",
+					"@dbeaver-use-prepared-statements-db@": "false",
+					"postgresql.dd.plain.string": "false",
+					"postgresql.dd.tag.string": "false"
+				},
+				"auth-model": "native",
+				"handlers": {}
+			}
+		}
+	},
+	"virtual-models": {
+		"postgres-jdbc-180d054b98d-583cbf48836737ab": {
+			"postgres": {
+				"iris_msg": {
+					"@properties": {
+						"erd.diagram.state": {
+							"serialized": "<diagram version=\"1\" name=\"empty\" time=\"202205170108\"><entities><data-source id=\"postgres-jdbc-180d054b98d-583cbf48836737ab\"><entity id=\"1\" name=\"chat\" fq-name=\"iris_msg.chat\" order=\"0\" x=\"292\" y=\"374\"><path name=\"iris_msg\"/><path name=\"postgres\"/></entity><entity id=\"2\" name=\"contact\" fq-name=\"iris_msg.contact\" order=\"1\" x=\"52\" y=\"110\"><path name=\"iris_msg\"/><path name=\"postgres\"/></entity><entity id=\"3\" name=\"group_member\" fq-name=\"iris_msg.group_member\" order=\"2\" x=\"273\" y=\"157\"><path name=\"iris_msg\"/><path name=\"postgres\"/></entity><entity id=\"4\" name=\"message\" fq-name=\"iris_msg.message\" order=\"3\" x=\"485\" y=\"337\"><path name=\"iris_msg\"/><path name=\"postgres\"/></entity></data-source></entities><relations><relation name=\"group_member_chat_id_fk_fkey\" fq-name=\"iris_msg.group_member.group_member_chat_id_fk_fkey\" type=\"fk\" pk-ref=\"1\" fk-ref=\"3\"/><relation name=\"message_chat_id_fk_fkey\" fq-name=\"iris_msg.message.message_chat_id_fk_fkey\" type=\"fk\" pk-ref=\"1\" fk-ref=\"4\"/><relation name=\"group_member_contact_id_fkey\" fq-name=\"iris_msg.group_member.group_member_contact_id_fkey\" type=\"fk\" pk-ref=\"2\" fk-ref=\"3\"/></relations></diagram>"
+						}
+					}
+				}
+			}
+		}
+	},
+	"connection-types": {
+		"dev": {
+			"name": "Development",
+			"color": "255,255,255",
+			"description": "Regular development database",
+			"auto-commit": true,
+			"confirm-execute": false,
+			"confirm-data-change": false,
+			"auto-close-transactions": false
+		}
+	}
+}
