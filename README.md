@@ -20,4 +20,4 @@ Users can:
 Database Schema Reference:
 
 
-![image](https://user-images.githubusercontent.com/102980815/168733640-06dd4004-ff16-4879-8ae9-3ba61ec1156e.png)
+
