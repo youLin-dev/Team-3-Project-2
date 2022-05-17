@@ -15,9 +15,3 @@ Users can:
 ·Edit and delete their past messages.
 ·Edit and update their profile info and status.
 ·Make 10 successful JUnit tests.
-
-
-Database Schema Reference:
-
-
-
