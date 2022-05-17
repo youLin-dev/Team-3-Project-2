@@ -24,6 +24,9 @@
 		
 		<!-- We will map our classes here -->
 		<mapping class="com.revature.models.User"/>
+		<mapping class="com.revature.models.Chat"/>
+		<mapping class="com.revature.models.Member"/>
+		<mapping class="com.revature.models.Message"/>
 		<!--<mapping class="com.revature.models."/>  -->
  	
  	</session-factory>

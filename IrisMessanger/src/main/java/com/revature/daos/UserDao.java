@@ -47,4 +47,6 @@ public class UserDao {
 		HibernateUtil.closeSession();
 		return u;
 	}
+	
+	//need get by phone_number
 }
