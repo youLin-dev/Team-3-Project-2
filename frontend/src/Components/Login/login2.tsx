@@ -1,14 +1,16 @@
+
 import React, { useEffect, useState } from "react"
 import { useDispatch, useSelector } from "react-redux"
 import { useNavigate } from "react-router-dom"
 import { loginUser } from "../../actions/UserActions"
 
-import "./login.css"
+import "./Login2.css"
+import RegisterPage from "./Register"
+const LoginPage = (props:any)=>{
 
-export const Login: React.FC<any> = () => {
-
+/*Missing code from login.tsx */
     //this is how we access the state in the store. The data in the universal data file.
-    const appState = useSelector<any, any>((state: any) => state);
+    /*const appState = useSelector<any, any>((state: any) => state);
 
     //we need this object to actually dispatch data to our store
     const dispatch = useDispatch();
@@ -50,47 +52,54 @@ export const Login: React.FC<any> = () => {
             navigate("/home"); //thanks to Routing in the App.tsx, this will switch the component.
         }
     }, [appState])
+*/
+return(
+<div className="mt200"> 
+{/* create column*/}
+<div className="login-row"> 
+    <div className="smallCol">
+1
+    </div>
+    <div className="midCol">
+    <div className="login--page mb25">
+<div className="login--form"><div className="row">
+  
+  <div className="column2">
+
+    <br>
+    </br>
+
+    <div className="input-container">
+      <input type="text" name="username" className="input--field" placeholder="username" /*onChange={handleChange}*/ />
+    </div>
+
+    <div className="input-container">
+      <input type="password" className="input--field" name="password" placeholder="password" /*onChange={handleChange}*/ />
+    </div>
+
+    <button className="login-button" >Friends Login!</button>
+  </div>
+</div>
+</div>
+</div>
+<div className="disclaimer">
+    <p>Or</p>
+    <p></p>
+  </div>
+
+  
+
+  <RegisterPage />
+</div>
+    <div className="smallCol">
+3
+</div>
+  </div>
 
 
-    return(
-        <div className="login">
 
-            <div className="text-container">
-                <h1></h1>
-                <div></div>
-                <div></div>
-                <br>
-                </br>
-                <br>
-                </br>
-                <br>
-                </br>
-                <br>
-                </br>
-                <br>
-                </br>
-                <br>
-                </br>
-               <div> </div>
-               <h3>hello there</h3>
+</div>
 
-                <div className="input-container">
-                     <input type="text" name="username" placeholder="username" onChange={handleChange}/>
-                </div>
-
-                <div className="input-container">
-                    <input type="password" name="password" placeholder="password" onChange={handleChange}/>
-                </div>
-                                    
-                    <button className="login-button" >Login</button> 
-                </div>
-
-                <div className="disclaimer">
-                    <p>Iris delivers your personal messages quickly and securely.</p>
-                </div>
-
-        </div>
-       
-    )
-
+)
 }
+export default LoginPage;
