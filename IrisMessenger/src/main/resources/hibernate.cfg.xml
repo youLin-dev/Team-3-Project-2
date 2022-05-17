@@ -10,20 +10,23 @@
  	<!-- JDBC -->
 		<property name="hibernate.connection.username">postgres</property>
 		<property name="hibernate.connection.password">password</property>
-		<property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/postgres?currentSchema=hybernate</property>
+		<property name="hibernate.connection.url">jdbc:postgresql://demodb.czhobuiltnkw.us-east-1.rds.amazonaws.com:5432/postgres?currentSchema=iris</property>
 		<property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
 		<!-- Hibernate Properties -->
 		<property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
-		<property name="hibernate.default_schema">hybernate</property>
+		<property name="hibernate.default_schema">iris</property>
 		<!-- Hibernate console output -->
 		<property name="hibernate.show_sql">true</property>
 		<property name="hibernate.format_sql">true</property>
 		<!-- DDL -->
-		<property name="hibernate.hbm2ddl.auto">create</property>
+		<property name="hibernate.hbm2ddl.auto">update</property>
 		<!-- Anyone remember what setting our hbm2ddl.auto to create will do? -->
 		
 		<!-- We will map our classes here -->
 		<mapping class="com.revature.models.User"/>
+		<mapping class="com.revature.models.Chat"/>
+		<mapping class="com.revature.models.Member"/>
+		<mapping class="com.revature.models.Message"/>
 		<!--<mapping class="com.revature.models."/>  -->
  	
  	</session-factory>
