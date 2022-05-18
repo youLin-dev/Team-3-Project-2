@@ -8,6 +8,7 @@ import org.hibernate.Session;
 import org.hibernate.criterion.Restrictions;
 import java.util.List;
 
+import javax.persistence.NoResultException;
 import javax.persistence.Query;
 
 public class UserDao {
@@ -24,16 +25,21 @@ public class UserDao {
 	/**
 	 * 
 	 * @param username
-	 * @return user object with matching username
+	 * @return user object with matching username, Null if no matching username
 	 */
 	public User getUserbyUsername(String username) {
 		Session ses = HibernateUtil.getSession();
 		Query q = ses.createQuery("FROM User m WHERE m.username = ?0");
 		q.setParameter(0, username);
-		List<User> u = q.getResultList();
+		User u;
+		try {
+			u = (User) q.getSingleResult();
+		} catch (NoResultException e) {
+			// TODO Auto-generated catch block
+			u = null;
+		}
 		HibernateUtil.closeSession();
-		return u.get(0);
-		
+		return u;
 		
 	}
 	/**
@@ -48,5 +54,24 @@ public class UserDao {
 		return u;
 	}
 	
-	//need get by phone_number
+	/**
+	 * 
+	 * @param phone_number
+	 * @return User object with matching phone number, Null if no matching phone number found
+	 */
+	public User getUserbyPhoneNumber(String phone_number) {
+		Session ses = HibernateUtil.getSession();
+		Query q = ses.createQuery("FROM User m WHERE m.phone_number = ?0");
+		q.setParameter(0, phone_number);
+		//List<User> u = q.getResultList();
+		User u;
+		try {
+			u = (User) q.getSingleResult();
+		} catch (NoResultException e) {
+			// TODO Auto-generated catch block
+			u = null;
+		}
+		HibernateUtil.closeSession();
+		return u;
+	}
 }
