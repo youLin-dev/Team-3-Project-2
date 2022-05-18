@@ -1,5 +1,7 @@
 package com.revature.daos;
 
+import com.revature.models.Chat;
+import com.revature.models.Member;
 import com.revature.models.User;
 import com.revature.utils.HibernateUtil;
 
@@ -15,11 +17,12 @@ public class UserDao {
 	/**
 	 * Adds given user to the users table
 	 * */
-	public void createUser(User user) {
+	public User createUser(User user) {
 		Session ses = HibernateUtil.getSession();
 		ses.save(user);
 		HibernateUtil.closeSession();
 		System.out.println("-- "+user+" added to database");
+		return getUserbyUsername(user.getUsername());
 	}
 	
 	/**
@@ -75,3 +78,13 @@ public class UserDao {
 		return u;
 	}
 }
+//code for testing please ignore
+/* 
+ * UserDao ud = new UserDao();
+		ud.createUser(new User("u","p","0"));
+		ChatDao cd = new ChatDao();
+		cd.createChat(new Chat("test"));
+		MemberDao md = new MemberDao();
+		Member m = md.createMember(new Member("10", ud.getUserbyUsername("u"),cd.getChatByName("test")));
+		System.out.println(md.getMemberbyUserAndChat(ud.getUserbyUsername("u"),cd.getChatByName("test")));
+ * */

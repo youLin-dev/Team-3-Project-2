@@ -1,6 +1,10 @@
 package com.revature;
 
+import com.revature.daos.ChatDao;
+import com.revature.daos.MemberDao;
 import com.revature.daos.UserDao;
+import com.revature.models.Chat;
+import com.revature.models.Member;
 import com.revature.models.User;
 
 import io.javalin.Javalin;
@@ -19,8 +23,6 @@ public class Launcher {
 		app.get("/login", ctx -> ctx.result("Iris Messenger Login Page"));
 		
 		
-
-
 		
 		
 	}//https://github.com/YouLin968/Team-3-Project-2.git
