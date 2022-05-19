@@ -26,6 +26,9 @@ public class Message {
 	@Column
 	private String time_sent;
 	
+	
+	private boolean owned;
+	
 	@ManyToOne(fetch = FetchType.EAGER, cascade=CascadeType.ALL)
 	@JoinColumn(name = "chat_id")
 	private Chat chat_fk;
@@ -62,6 +65,14 @@ public class Message {
 	public String toString() {
 		return "Message [message_id=" + message_id + ", message_text=" + message_text + ", time_sent=" + time_sent
 				+ ", chat_fk=" + chat_fk.getName() + ", member_fk=" + member_fk.getUser_fk().getUsername() + "]";
+	}
+	
+	public boolean isOwned() {
+		return owned;
+	}
+
+	public void setOwned(boolean owned) {
+		this.owned = owned;
 	}
 
 	public int getMessage_id() {
