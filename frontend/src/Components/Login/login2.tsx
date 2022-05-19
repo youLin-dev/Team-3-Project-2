@@ -7,9 +7,9 @@ import { loginUser } from "../../actions/UserActions"
 
 import "./Login2.css"
 import RegisterPage from "./Register"
-const LoginPage = (props:any)=>{
+export const LoginPage: React.FC<any>= ()=>{
 
-/*Missing code from login.tsx */
+    /*Missing code from login.tsx */
     //this is how we access the state in the store. The data in the universal data file.
     const appState = useSelector<any, any>((state: any) => state);
     //we need this object to actually dispatch data to our store
@@ -20,7 +20,7 @@ const LoginPage = (props:any)=>{
     //we'll use this object to switch components whenever appropriate
     //this is what lets us navigate through the application through button clicks, etc.
     const navigate = useNavigate();
-//BUSINESS LOGIC
+    //BUSINESS LOGIC
     //when user updates the username/password field, this login function is called
     //when user updates the values, username OR password get updated as well
     //this is how we can send a username/password object to the loginUser Action
@@ -50,9 +50,18 @@ const LoginPage = (props:any)=>{
         }
     }, [appState])
 
-return(
+    return(
+        <div>
+            <h3>asdasd</h3>
+        </div>
+
+    )
+}
+//export default LoginPage;
+
+/*
 <div className="mt200"> 
-{/* create column*/}
+
 <div className="login-row"> 
     <div className="smallCol">
 1
@@ -68,37 +77,34 @@ return(
     </br>
 
     <div className="input-container">
-      <input type="text" name="username" className="input--field" placeholder="username" /*onChange={handleChange}*/ />
-    </div>
+      <input type="text" name="username" className="input--field" placeholder="username"  />
+      </div>
 
-    <div className="input-container">
-      <input type="password" className="input--field" name="password" placeholder="password" /*onChange={handleChange}*/ />
-    </div>
-
-    <button className="login-button" >Friends Login!</button>
-  </div>
-</div>
-</div>
-</div>
-
-<div className="disclaimer">
-    <p>Or</p>
-    <p></p>
-  </div>
-
+      <div className="input-container">
+        <input type="password" className="input--field" name="password" placeholder="password"  />
+      </div>
   
-
-  <RegisterPage />
-</div>
-    <div className="smallCol">
-3
-</div>
+      <button className="login-button" >Friends Login!</button>
+    </div>
   </div>
-
-
-
-</div>
-
-)
-}
-export default LoginPage;
+  </div>
+  </div>
+  
+  <div className="disclaimer">
+      <p>Or</p>
+      <p></p>
+    </div>
+  
+    
+  
+    <RegisterPage />
+  </div>
+      <div className="smallCol">
+  
+  </div>
+    </div>
+  
+  
+  
+  </div>
+*/

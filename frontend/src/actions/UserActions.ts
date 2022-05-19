@@ -1,12 +1,12 @@
 
 import axios from "axios";
-import { User } from "../Components/store/types"
+import { User } from "../store/types"
 import { LOGIN_USER } from "./actionTypes";
 
 //There will be functionality here that use or change our User state object
 
 //interface that models the user's login credentials, we'll send in our POST request
-interface UserLogin {
+interface UserLogin {//check with You to make sure this matches loginDTO in backend
     username: string,
     password: string
 }
@@ -22,7 +22,7 @@ export const loginUser = (loginCreds:UserLogin) => async (dispatch:any) => {
     try {
 
         //send my HTTP request with axios, and put it into a variable we can use
-        const response = await axios.post('http://localhost:5000/login', loginCreds);
+        const response = await axios.post('http://localhost:9000/login', loginCreds);
 
         if(response.status === 202) { //if the login was successful...
             
@@ -31,9 +31,13 @@ export const loginUser = (loginCreds:UserLogin) => async (dispatch:any) => {
             //populate our loggedInUser variable based on the data sent back from the server
             //this is the payload of new data we're going to dispatch to the store
             loggedInUser = {
-                id: response.data.id,
+                id: response.data.user_id,
                 username: response.data.username,
-                password: response.data.password
+                password: response.data.pass_word,
+                firstName: response.data.first_name,
+                lastName: response.data.last_name,
+                phoneNumber: response.data.phone_number
+
             }
 
             //now we actually DISPATCH (send) this data to the store and reducers 

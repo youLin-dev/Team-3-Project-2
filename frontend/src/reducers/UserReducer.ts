@@ -1,15 +1,18 @@
 
-import { LOGIN_USER } from "../../actions/actionTypes";
+import { LOGIN_USER } from "../actions/actionTypes";
 import { User } from "../store/types";
 
 let initialState: User = {
-    id:0,
-    username:"",
-    password:""
+    id: 0,
+    username: "",
+    password: "",
+    firstName: "",
+    lastName: "",
+    phoneNumber: ""
 }
 
 //this is an object that will determine what action to take
-type Action = {type:string, payload:object};
+type Action = {type:string, payload:any};//changed object to any <-------------------
 
 //the reducer takes in a User object, which is meant to update initialState
 //it will also take in an Action object that contains wha action to take, and what data it ahs (payload)
@@ -22,7 +25,8 @@ export const userReducer = (state:User = initialState, action: Action) => {
             //We change the default User to the User we sent in the (payload)
             //in this way, we change the initial state to the data that came from the server
             
-            initialState //= action.payload    UNABLE TO DEBUG "initialState" doesn't like action ??
+            initialState = action.payload    //UNABLE TO DEBUG "initialState" doesn't like action ??
+            //fixed by alex check comment on line 15
             return {
                 ...initialState//return that object so it can be reused in the view
             }

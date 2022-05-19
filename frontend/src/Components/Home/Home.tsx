@@ -3,6 +3,7 @@ import React, { useState } from "react"
 import { useDispatch, useSelector } from "react-redux";
 import {  } from "../../actions/UserActions";
 import { } from "../Login/login2";
+import { User } from "../../store/types";
 
 
 import "./Home.css"
@@ -38,10 +39,10 @@ export const Home: React.FC<any> = () => {
     return(
         <div className="home-page">
             <div className="home-container">
-                <User user={appState.user}/>
+
                 <h3>place holder!</h3>
                 <input type="number" name="userSearch" placeholder="Enter UserID" onChange={handleChange}/>
-                <button className="user-button" onClick={getUser}>Find User</button>
+                
             </div>
         </div>
     );
@@ -49,4 +50,5 @@ export const Home: React.FC<any> = () => {
 function getUser(userID: number): any {
     throw new Error("Function not implemented.");
 }
-
+//<User user={appState.user}/> 42
+//<button className="user-button" onClick={getUser}>Find User</button> 45

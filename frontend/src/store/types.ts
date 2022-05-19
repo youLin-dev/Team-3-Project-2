@@ -22,18 +22,23 @@ export interface Chat {
 //type keyword like calling something an object in Java
 export type AppState = {
     user: User,
-    chatName: Chat
+    chatName: Chat,
+    messages: Messages,
+    //message: Message
+}
+
+export interface Message {
+
+        messageText: string;
+        sentDateTime: string;
+        byMe: boolean;
+
 
 }
 
-export interface message {
-        messageId: string;
-        groupMemberId: number;
-        messageText: string;
-        sentDateTime: string;
-        chatId: number
-
-    }
+export interface Messages{
+        m: Message[]
+}
 
 
 //
