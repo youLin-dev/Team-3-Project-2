@@ -25,7 +25,6 @@ const initialState:AppState = {
         id: 0,
         chatName: ""
     },
-<<<<<<< HEAD:frontend/src/store/store.ts
 
     messages: {
         m: [{
@@ -39,19 +38,6 @@ const initialState:AppState = {
         }]
     },
     //message: 
-=======
-
-   message: {
-        messageId:0,
-        groupMemberId:0,
-        messageText:"",
-        sentDateTime:"",
-        chatId:0
- 
-    }
-
-
->>>>>>> 53c2549739fb282265ec4756582893dd89989ba5:frontend/src/Components/store/store.ts
 }
 
 
