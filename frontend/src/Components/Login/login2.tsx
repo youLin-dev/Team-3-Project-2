@@ -9,7 +9,7 @@ import "./Login2.css"
 import RegisterPage from "./Register"
 //export const Login2: React.FC<any> = () => {}
 
-const LoginPage = (props:any)=>{
+export const LoginPage: React.FC<any> = (props:any)=>{
 
 /*Missing code from login.tsx */
     //this is how we access the state in the store. The data in the universal data file.
@@ -99,4 +99,3 @@ return(
 
 )
 }
-export default LoginPage;

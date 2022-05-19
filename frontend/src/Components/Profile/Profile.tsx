@@ -5,9 +5,9 @@ import { Link } from "react-router-dom";
 import "./profile.css";
 import userImage from "../../assets/default-avatar.png";
 import { useDispatch, useSelector } from "react-redux"
-const ProfilePage = (props:any)=>{
+//const ProfilePage = (props:any)=>{
 
-  
+export const ProfilePage: React.FC<any> = (props:any)=>{ 
     ///
 return(
 <div className="profile mb130"> 
@@ -40,5 +40,3 @@ return(
 )
 }
 
-
-export default ProfilePage;
