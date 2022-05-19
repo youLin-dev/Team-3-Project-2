@@ -1,0 +1,25 @@
+2022-05-17 17:16:34,292 [Worker-4: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2022-05-18 02:07:20,015 [Worker-1: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2022-05-18 02:08:40,549 [Worker-3: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-05-18 02:08:40,554 [Worker-3: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-05-18 02:08:40,588 [Worker-3: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-05-18 02:08:40,589 [Worker-3: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\You\Documents\My_Program\Team-3-Project-2\IrisMessenger\src\test\resources
+2022-05-18 02:46:05,119 [Start Help Server] INFO  org.eclipse.jetty.util.log - Logging initialized @2331489ms to org.eclipse.jetty.util.log.Slf4jLog
+2022-05-18 02:46:05,213 [Start Help Server] INFO  org.eclipse.jetty.server.Server - jetty-9.4.31.v20200723; built: 2020-08-03T13:24:06.825Z; git: 450ba27947e13e66baa8cd1ce7e85a4461cacc1d; jvm 15+36-1562
+2022-05-18 02:46:05,228 [Start Help Server] INFO  org.eclipse.jetty.server.session - DefaultSessionIdManager workerName=node0
+2022-05-18 02:46:05,229 [Start Help Server] INFO  org.eclipse.jetty.server.session - No SessionScavenger set, using defaults
+2022-05-18 02:46:05,230 [Start Help Server] INFO  org.eclipse.jetty.server.session - node0 Scavenging every 600000ms
+2022-05-18 02:46:05,252 [Start Help Server] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@66bf7a4b{/help,null,AVAILABLE}
+2022-05-18 02:46:05,268 [Start Help Server] INFO  o.e.jetty.server.AbstractConnector - Started ServerConnector@399d5246{HTTP/1.1, (http/1.1)}{127.0.0.1:59705}
+2022-05-18 02:46:05,268 [Start Help Server] INFO  org.eclipse.jetty.server.Server - Started @2331640ms
+2022-05-18 02:46:05,268 [Start Help Server] INFO  org.eclipse.jetty.server.session - node0 Scavenging every 660000ms
+2022-05-18 04:58:30,363 [Stop Help Server] INFO  o.e.jetty.server.AbstractConnector - Stopped ServerConnector@399d5246{HTTP/1.1, (http/1.1)}{127.0.0.1:0}
+2022-05-18 04:58:30,363 [Stop Help Server] INFO  org.eclipse.jetty.server.session - node0 Stopped scavenging
+2022-05-18 04:58:30,376 [Stop Help Server] INFO  o.e.j.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@66bf7a4b{/help,null,UNAVAILABLE}
+2022-05-18 04:59:27,121 [Worker-2: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2022-05-18 16:03:19,901 [Worker-0: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2022-05-19 12:36:10,102 [Worker-1: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2022-05-19 12:36:17,762 [Worker-4: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-05-19 12:36:17,765 [Worker-4: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-05-19 12:36:17,781 [Worker-4: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-05-19 12:36:17,782 [Worker-4: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\You\Documents\My_Program\Team-3-Project-2\IrisMessenger\src\test\resources
