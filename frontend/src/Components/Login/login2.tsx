@@ -1,4 +1,5 @@
 
+
 import React, { useEffect, useState } from "react"
 import { useDispatch, useSelector } from "react-redux"
 import { useNavigate } from "react-router-dom"
@@ -10,15 +11,12 @@ const LoginPage = (props:any)=>{
 
 /*Missing code from login.tsx */
     //this is how we access the state in the store. The data in the universal data file.
-    /*const appState = useSelector<any, any>((state: any) => state);
-
+    const appState = useSelector<any, any>((state: any) => state);
     //we need this object to actually dispatch data to our store
     const dispatch = useDispatch();
-
     //useState hooks to declare a state object, a mutator (which changed state), and a default value
     let [username, setUsername] = useState('');//useState must be imported
     let [password, setPassword] = useState('');
-
     //we'll use this object to switch components whenever appropriate
     //this is what lets us navigate through the application through button clicks, etc.
     const navigate = useNavigate();
@@ -35,7 +33,6 @@ const LoginPage = (props:any)=>{
             setPassword(e.target.value) //otherwise, set the password with that value.
         }
     }
-
     //LOGIN functionality. we take the state objects and send them to the userLogin Action
     //sending /dispatching the data
     const login = async () => {
@@ -52,7 +49,7 @@ const LoginPage = (props:any)=>{
             navigate("/home"); //thanks to Routing in the App.tsx, this will switch the component.
         }
     }, [appState])
-*/
+
 return(
 <div className="mt200"> 
 {/* create column*/}
@@ -60,6 +57,7 @@ return(
     <div className="smallCol">
 1
     </div>
+
     <div className="midCol">
     <div className="login--page mb25">
 <div className="login--form"><div className="row">
@@ -82,6 +80,7 @@ return(
 </div>
 </div>
 </div>
+
 <div className="disclaimer">
     <p>Or</p>
     <p></p>

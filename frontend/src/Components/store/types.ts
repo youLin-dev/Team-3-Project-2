@@ -1,13 +1,16 @@
 //types holds all possible objects/types
 
 import { IsUnknownOrNonInferrable } from "@reduxjs/toolkit/dist/tsHelpers";
+import internal from "stream";
 
 //declare some types as interfaces
 export interface User {
     id:0,
     username: string;
     password: string;
-
+    firstName: string;
+    lastName: string;
+    phoneNumber: string
 }
 
 export interface Chat { 
@@ -22,4 +25,15 @@ export type AppState = {
     chatName: Chat
 
 }
+
+export interface message {
+        messageId: string;
+        groupMemberId: number;
+        messageText: string;
+        sentDateTime: string;
+        chatId: number
+
+    }
+
+
 //

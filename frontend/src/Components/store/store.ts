@@ -9,7 +9,10 @@ const initialState:AppState = {
     user: {
         id:0,
         username:"",
-        password:""
+        password:"",
+        firstName:"",
+        lastName:"",
+        phoneNumber:""
 
     },
 
@@ -19,9 +22,20 @@ const initialState:AppState = {
         id:0,
         chatName:""
     }
+    
+    message: {
+        messageId:"",
+        groupMemberId:"",
+        messageText:"",
+        sentDateTime:"",
+        chatId:""
+
+    }
+
 }
 //Reducer folder is contained in this "reducer" object
 //when store data changes, reducers auto notify comonents, which change their view
 export const store = configureStore({
     reducer
 })
+
