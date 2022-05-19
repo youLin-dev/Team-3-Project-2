@@ -7,15 +7,11 @@ import { loginUser } from "../../actions/UserActions"
 
 import "./Login2.css"
 import RegisterPage from "./Register"
-export const LoginPage: React.FC<any>= ()=>{
+//export const LoginPage: React.FC<any>= ()=>{
 
-<<<<<<< HEAD
-    /*Missing code from login.tsx */
-=======
 export const LoginPage: React.FC<any> = (props:any)=>{
 
 /*Missing code from login.tsx */
->>>>>>> f46cfc334a24332ee37472b9c07cf7fe23dcbaf5
     //this is how we access the state in the store. The data in the universal data file.
     const appState = useSelector<any, any>((state: any) => state);
     //we need this object to actually dispatch data to our store
@@ -113,12 +109,8 @@ export const LoginPage: React.FC<any> = (props:any)=>{
   
   
   </div>
-<<<<<<< HEAD
-*/
-=======
 
 </div>
 
 )
-}
->>>>>>> f46cfc334a24332ee37472b9c07cf7fe23dcbaf5
+}*/
