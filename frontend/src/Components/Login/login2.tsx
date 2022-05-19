@@ -7,7 +7,13 @@ import { loginUser } from "../../actions/UserActions"
 
 import "./Login2.css"
 import RegisterPage from "./Register"
+<<<<<<< HEAD
 export const LoginPage: React.FC<any>= ()=>{
+=======
+//export const Login2: React.FC<any> = () => {}
+
+const LoginPage = (props:any)=>{
+>>>>>>> 53c2549739fb282265ec4756582893dd89989ba5
 
     /*Missing code from login.tsx */
     //this is how we access the state in the store. The data in the universal data file.
@@ -77,6 +83,7 @@ export const LoginPage: React.FC<any>= ()=>{
     </br>
 
     <div className="input-container">
+<<<<<<< HEAD
       <input type="text" name="username" className="input--field" placeholder="username"  />
       </div>
 
@@ -108,3 +115,35 @@ export const LoginPage: React.FC<any>= ()=>{
   
   </div>
 */
+=======
+      <input type="text" name="username" className="input--field" placeholder="username" onChange={handleChange} />
+    </div>
+
+    <div className="input-container">
+      <input type="password" className="input--field" name="password" placeholder="password" onChange={handleChange} />
+    </div>
+
+    <button className="login-button" >Friends Login!</button>
+  </div>
+</div>
+</div>
+</div>
+
+<div className="disclaimer">
+    <p>Or</p>
+    <p></p>
+  </div>
+
+  <RegisterPage />
+</div>
+    <div className="smallCol">
+3
+</div>
+  </div>
+
+</div>
+
+)
+}
+export default LoginPage;
+>>>>>>> 53c2549739fb282265ec4756582893dd89989ba5

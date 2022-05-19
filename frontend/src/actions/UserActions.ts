@@ -1,6 +1,10 @@
 
 import axios from "axios";
+<<<<<<< HEAD
 import { User } from "../store/types"
+=======
+import { IUser } from "../Components/store/types"
+>>>>>>> 53c2549739fb282265ec4756582893dd89989ba5
 import { LOGIN_USER } from "./actionTypes";
 
 //There will be functionality here that use or change our User state object
@@ -17,7 +21,7 @@ interface UserLogin {//check with You to make sure this matches loginDTO in back
 export const loginUser = (loginCreds:UserLogin) => async (dispatch:any) => {
 
     //create an empty object of type IUser - this will get filled on successful login
-    let loggedInUser: User;
+    let loggedInUser: IUser;
 
     try {
 
@@ -33,11 +37,18 @@ export const loginUser = (loginCreds:UserLogin) => async (dispatch:any) => {
             loggedInUser = {
                 id: response.data.user_id,
                 username: response.data.username,
+<<<<<<< HEAD
                 password: response.data.pass_word,
                 firstName: response.data.first_name,
                 lastName: response.data.last_name,
                 phoneNumber: response.data.phone_number
 
+=======
+                password: response.data.password,
+                firstName: response.data.password,
+                lastName: response.data.password,
+                phoneNumber: response.data.password
+>>>>>>> 53c2549739fb282265ec4756582893dd89989ba5
             }
 
             //now we actually DISPATCH (send) this data to the store and reducers 
@@ -45,7 +56,8 @@ export const loginUser = (loginCreds:UserLogin) => async (dispatch:any) => {
             //notice in the reducers, this is the type of data we need for the Action object
             return dispatch({
                 type: LOGIN_USER,
-                payload: loggedInUser
+                payload: loggedInUser,
+               
             })
 
         }
