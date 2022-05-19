@@ -1,13 +1,13 @@
 
+
 import React, { useState } from "react"
 import { useDispatch, useSelector } from "react-redux";
 import {  } from "../../actions/UserActions";
 import { } from "../Login/login2";
-
-
+/*
 import "./Home.css"
 
-export const Home: React.FC<any> = () => {
+//export const Home: React.FC<any> = () => {
 
     //we need useSelector to access the store
     //we set it so that it can take <any state, and access any store>
@@ -26,15 +26,14 @@ export const Home: React.FC<any> = () => {
             setUserID(e.target.value) //use the mutator to get the value the user inputted
         }
     }
-
-    //we need to actually send our pokeID state to the getPoke action
+    //we need to actually send our userID state to the getUser action
     const loadUser = async () => {
         await dispatch(
             getUser(userID) as any //we send the userID state variable to the getUser action
             //"as any" because the component doesn't know what type this will return
         )
     }
-
+   
     return(
         <div className="home-page">
             <div className="home-container">
@@ -45,8 +44,10 @@ export const Home: React.FC<any> = () => {
             </div>
         </div>
     );
-}
+
+    }
 function getUser(userID: number): any {
     throw new Error("Function not implemented.");
 }
 
+*/

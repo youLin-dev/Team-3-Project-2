@@ -4,7 +4,7 @@ import { IsUnknownOrNonInferrable } from "@reduxjs/toolkit/dist/tsHelpers";
 import internal from "stream";
 
 //declare some types as interfaces
-export interface User {
+export interface IUser {
     id:0,
     username: string;
     password: string;
@@ -21,13 +21,14 @@ export interface Chat {
 //AppState object that will store one of each interface
 //type keyword like calling something an object in Java
 export type AppState = {
-    user: User,
-    chatName: Chat
+    user: IUser,
+    chatName: Chat,
+    message: message
 
 }
 
 export interface message {
-        messageId: string;
+        messageId: number;
         groupMemberId: number;
         messageText: string;
         sentDateTime: string;

@@ -7,6 +7,8 @@ import { loginUser } from "../../actions/UserActions"
 
 import "./Login2.css"
 import RegisterPage from "./Register"
+//export const Login2: React.FC<any> = () => {}
+
 const LoginPage = (props:any)=>{
 
 /*Missing code from login.tsx */
@@ -68,11 +70,11 @@ return(
     </br>
 
     <div className="input-container">
-      <input type="text" name="username" className="input--field" placeholder="username" /*onChange={handleChange}*/ />
+      <input type="text" name="username" className="input--field" placeholder="username" onChange={handleChange} />
     </div>
 
     <div className="input-container">
-      <input type="password" className="input--field" name="password" placeholder="password" /*onChange={handleChange}*/ />
+      <input type="password" className="input--field" name="password" placeholder="password" onChange={handleChange} />
     </div>
 
     <button className="login-button" >Friends Login!</button>
@@ -86,16 +88,12 @@ return(
     <p></p>
   </div>
 
-  
-
   <RegisterPage />
 </div>
     <div className="smallCol">
 3
 </div>
   </div>
-
-
 
 </div>
 
