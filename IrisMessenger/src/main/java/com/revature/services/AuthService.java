@@ -1,21 +1,20 @@
 package com.revature.services;
 
+import com.revature.daos.UserDao;
 import com.revature.models.User;
 
 public class AuthService {
 
 	public User login(String username, String password) {
 	
-	if(username.equals("user") && password.equals("password")) {
+		UserDao ud = new UserDao();
 		
-		
-		User user = new User();
-	
-		
-		return new User();
-	} else {
-		return null;
-	}
+        User u = ud.getUserbyUsername(username);
+        if(u != null) {
+        	
+            if(u.getPass_word().equals(password)) {return u;}else {return null;}
+            
+        }else {return null;}
 
 	}
 	
