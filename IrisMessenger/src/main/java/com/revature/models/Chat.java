@@ -22,7 +22,7 @@ public class Chat {
 	private int chat_id;
 	
 	@Column
-	private String name;
+	private String chat_name;
 	
 	@OneToMany(fetch = FetchType.EAGER, cascade=CascadeType.ALL)
 	@JoinColumn(name = "member_id")
@@ -39,7 +39,7 @@ public class Chat {
 	public Chat(int chat_id, String name, List<Member> member_fk, List<Message> message_fk) {
 		super();
 		this.chat_id = chat_id;
-		this.name = name;
+		this.chat_name = name;
 		this.member_fk = member_fk;
 		this.message_fk = message_fk;
 	}
@@ -51,7 +51,7 @@ public class Chat {
 	 */
 	public Chat(String name) {
 		super();
-		this.name = name;
+		this.chat_name = name;
 	}
 
 	public int getChat_id() {
@@ -63,11 +63,11 @@ public class Chat {
 	}
 
 	public String getName() {
-		return name;
+		return chat_name;
 	}
 
 	public void setName(String name) {
-		this.name = name;
+		this.chat_name = name;
 	}
 
 	public List<Member> getMember_fk() {
@@ -88,7 +88,7 @@ public class Chat {
 
 	@Override
 	public String toString() {
-		return "Chat [chat_id=" + chat_id + ", name=" + name + ", member_fk=" + member_fk + "]";
+		return "Chat [chat_id=" + chat_id + ", name=" + chat_name + ", member_fk=" + member_fk + "]";
 	}
 	
 	
