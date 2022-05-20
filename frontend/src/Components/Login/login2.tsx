@@ -53,6 +53,7 @@ export const LoginPage: React.FC<any> = (props:any)=>{
     }, [appState])
 
     return(
+<<<<<<< HEAD
         <div>
             <h3>asdasd</h3>
         </div>
@@ -62,11 +63,19 @@ export const LoginPage: React.FC<any> = (props:any)=>{
 //export default LoginPage;
 
 /*
+=======
+   
+
+>>>>>>> f1e57ca4fc509aa3b912a0e252a5b0517373aa37
 <div className="mt200"> 
 
 <div className="login-row"> 
     <div className="smallCol">
+<<<<<<< HEAD
 1
+=======
+
+>>>>>>> f1e57ca4fc509aa3b912a0e252a5b0517373aa37
     </div>
 
     <div className="midCol">
@@ -93,8 +102,12 @@ export const LoginPage: React.FC<any> = (props:any)=>{
   </div>
   
   <div className="disclaimer">
+<<<<<<< HEAD
       <p>Or</p>
       <p></p>
+=======
+      
+>>>>>>> f1e57ca4fc509aa3b912a0e252a5b0517373aa37
     </div>
   
     
@@ -110,7 +123,17 @@ export const LoginPage: React.FC<any> = (props:any)=>{
   
   </div>
 
+<<<<<<< HEAD
 </div>
 
 )
 }*/
+=======
+)
+
+    
+}
+
+//export default LoginPage;
+
+>>>>>>> f1e57ca4fc509aa3b912a0e252a5b0517373aa37
