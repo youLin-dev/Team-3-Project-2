@@ -1,8 +1,9 @@
-import MyMessage from './MyMessage';
-import TheirMessage from './TheirMessage.tsx';
 import MessageForm from './MessageForm';
+import MyMessage from './MyMessage';
+import TheirMessage from './TheirMessage';
+//import MessageForm from './MessageForm';
 
-const Chatbox = (props) => {//include what we will be structuring
+const Chatbox = (props: any) => {//include what we will be structuring
   const { chats, activeChat, userName, messages } = props;
   //find our current chat: if chat exists then find chats/active chat
   const chat = chats && chats[activeChat];
@@ -10,8 +11,8 @@ const Chatbox = (props) => {//include what we will be structuring
   //console.log(chat, activechat, userName, messages) to see if they are working
 
   //component which fetches all our messages
-  const renderReadReceipts = (message, isMyMessage) => 
-    chat.people.map((person, index) => person.last_read === message.id && (
+  const renderReadReceipts = (message: any, isMyMessage: any) => 
+    chat.people.map((person: any, index: number) => person.last_read === message.id && (
     <div
       key={`read_${index}`}
       className="read-receipt"
@@ -41,7 +42,7 @@ const Chatbox = (props) => {//include what we will be structuring
             {isMyMessage
                 /*Pass message as prop into message to allow access to the message
                   this is called from const message above*/
-              ? <MyMessage message={message} />
+              ? <MyMessage message={message} lastMessage={undefined} />
                /*Pass msg into their msg also and the last msg (so two msgs in theirs and one in ours)
                  NOTE: last msg is dynamically added*/
               : <TheirMessage message={message} lastMessage={messages[lastMessageKey]} />} 
@@ -77,5 +78,5 @@ const Chatbox = (props) => {//include what we will be structuring
   );
 };
 
-export default ChatFeed;
+export default Chatbox;
 
