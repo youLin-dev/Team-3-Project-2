@@ -1,0 +1,54 @@
+/*Set main container area for profile page in row format*/
+.profile{
+    display: flex;
+    flex-wrap: wrap;
+    background: #f3efef;
+    height: calc(100vh - 30px);
+}
+/*Make small cplumn width for main area */
+.smallCol{
+    flex: 19.5%;
+}
+/*Make large column width for main area*/
+.midCol{
+    flex: 60%;
+}
+/* set border with 1px width on left and right side anywhere*/
+.borderBox {border-left: 1px solid #575656;border-right: 1px solid #575656;}
+/*sets the white space height to top of page*/
+/*coverage*/
+.mb130{ margin-top: 30px;}
+
+/*Set menu sidebar box*/
+.sidebar--menu {margin-top: 40px;display: block;}
+
+/*set link look like a button and the link works on redirect to another page as well*/
+a.link--btn {display: block;border: 2px solid #205ac8;text-decoration: none;font-size: 18px;max-width: 190px;margin: 15px auto;padding: 10px 0;text-align: center;}
+span.userpic {display: block;text-align: center;margin-top: 12px;}
+
+span.userpic img {max-width: 150px;}
+
+/*Chat box design*/
+.chatForm textarea {width: 80%;
+    margin: 2px auto 0;
+    display: block;
+    height: 54px;
+    border-radius: 8px;
+}
+
+.chatForm {position: absolute;width: 100%;bottom: 0px;}
+
+.midCol.borderBox {position: relative;}
+.profile-button {
+    background: #14FD41;
+    width: 80%;
+    border-color: #fff;
+    font-weight: bold;
+    border: 3px;
+    color: #38363F;
+    font-size: 18px;
+    padding: 10px 2px;
+    border-radius: 8px;
+    margin: 5px auto 1px;
+    display: block;
+}
