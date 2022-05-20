@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react"
 import { useDispatch, useSelector } from "react-redux"
 import { useNavigate } from "react-router-dom"
 import { loginUser } from "../../actions/UserActions"
+import {UserLogin} from "../../actions/UserActions"
 
 import "./Login2.css"
 import RegisterPage from "./Register"
@@ -33,11 +34,13 @@ export const LoginPage: React.FC<any> = (props:any)=>{
             console.log(username) //to show useState working
         } else {
             setPassword(e.target.value) //otherwise, set the password with that value.
+            console.log(password)
         }
     }
     //LOGIN functionality. we take the state objects and send them to the userLogin Action
     //sending /dispatching the data
     const login = async () => {
+        console.log("login")
         await dispatch(
             loginUser({username, password}) as any
             //these are the states that were changed with handleChange
@@ -53,87 +56,38 @@ export const LoginPage: React.FC<any> = (props:any)=>{
     }, [appState])
 
     return(
-<<<<<<< HEAD
-        <div>
-            <h3>asdasd</h3>
-        </div>
+        <div className="login">
 
+            <div className="text-container">
+                
+                <h3>Please sign in</h3>
+
+                <div className="input-container">
+                    <input type="text" name="username" placeholder="username" onChange={handleChange}/>
+                </div>
+                <div className="input-container">
+                    <input type="password" name="password" placeholder="password" onChange={handleChange}/>
+                </div>
+                <div className="container">
+                    <button className="login-button" onClick={login}>Login</button>
+                </div>
+            </div>
+                
+
+            <div className="disclaimer">
+                <p>PokeMart© and its affiliates do not condone the misuse or mistreatment of pokemon</p>
+            </div>
+
+        </div>
     )
+
+
+    
 }
-//export default LoginPage;
+export default LoginPage;
 
 /*
-=======
-   
 
->>>>>>> f1e57ca4fc509aa3b912a0e252a5b0517373aa37
-<div className="mt200"> 
-
-<div className="login-row"> 
-    <div className="smallCol">
-<<<<<<< HEAD
-1
-=======
-
->>>>>>> f1e57ca4fc509aa3b912a0e252a5b0517373aa37
-    </div>
-
-    <div className="midCol">
-    <div className="login--page mb25">
-<div className="login--form"><div className="row">
-  
-  <div className="column2">
-
-    <br>
-    </br>
-
-    <div className="input-container">
-      <input type="text" name="username" className="input--field" placeholder="username"  />
-      </div>
-
-      <div className="input-container">
-        <input type="password" className="input--field" name="password" placeholder="password"  />
-      </div>
-  
-      <button className="login-button" >Friends Login!</button>
-    </div>
-  </div>
-  </div>
-  </div>
-  
-  <div className="disclaimer">
-<<<<<<< HEAD
-      <p>Or</p>
-      <p></p>
-=======
-      
->>>>>>> f1e57ca4fc509aa3b912a0e252a5b0517373aa37
-    </div>
-  
-    
-  
-    <RegisterPage />
-  </div>
-      <div className="smallCol">
-  
-  </div>
-    </div>
-  
-  
-  
-  </div>
-
-<<<<<<< HEAD
-</div>
 
 )
 }*/
-=======
-)
-
-    
-}
-
-//export default LoginPage;
-
->>>>>>> f1e57ca4fc509aa3b912a0e252a5b0517373aa37

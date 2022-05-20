@@ -6,7 +6,7 @@ import { LOGIN_USER } from "./actionTypes";
 //There will be functionality here that use or change our User state object
 
 //interface that models the user's login credentials, we'll send in our POST request
-interface UserLogin {//check with You to make sure this matches loginDTO in backend
+export interface UserLogin {//check with You to make sure this matches loginDTO in backend
     username: string,
     password: string
 }
@@ -18,7 +18,8 @@ export const loginUser = (loginCreds:UserLogin) => async (dispatch:any) => {
 
     //create an empty object of type IUser - this will get filled on successful login
     let loggedInUser: User;
-
+    console.log(loginCreds);
+    console.log("loginUser")
     try {
 
         //send my HTTP request with axios, and put it into a variable we can use
@@ -26,7 +27,7 @@ export const loginUser = (loginCreds:UserLogin) => async (dispatch:any) => {
 
         if(response.status === 202) { //if the login was successful...
             
-            console.log(response) //to see the data coming back
+             //to see the data coming back
 
             //populate our loggedInUser variable based on the data sent back from the server
             //this is the payload of new data we're going to dispatch to the store
