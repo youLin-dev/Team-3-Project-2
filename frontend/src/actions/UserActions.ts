@@ -6,7 +6,7 @@ import { LOGIN_USER } from "./actionTypes";
 //There will be functionality here that use or change our User state object
 
 //interface that models the user's login credentials, we'll send in our POST request
-interface UserLogin {//check with You to make sure this matches loginDTO in backend
+export interface UserLogin {//check with You to make sure this matches loginDTO in backend
     username: string,
     password: string
 }

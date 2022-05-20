@@ -5,7 +5,9 @@ import { Link } from "react-router-dom";
 import "./profile.css";
 import userImage from "../../assets/default-avatar.png";
 import { useDispatch, useSelector } from "react-redux"
-import Chatbox from "../Message/ChatBox";
+//import Chatbox from "../Message/ChatBox";
+import RegisterPage from "../Login/Register";
+//import Chatbox from "../Message/ChatBox";
 //const ProfilePage = (props:any)=>{
 
 export const ProfilePage: React.FC<any> = (props:any)=>{ 
@@ -20,10 +22,17 @@ return(
             </div>
     </div>
     <div className="midCol borderBox">
-
+      
+    
+    <form>
         <div className="chatForm">
-           <Chatbox />
+            <div className="chatForm">
+                <textarea placeholder="Enter your message"></textarea>
+                <button className="profile-button" >Send !</button>
+            </div>
         </div>
+  </form>
+
               
     </div>
     <div className="smallCol">

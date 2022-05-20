@@ -36,9 +36,12 @@ span.userpic img {max-width: 150px;}
     border-radius: 8px;
 }
 
-.chatForm {position: absolute;width: 100%;bottom: 0px;}
+.chatForm {position: absolute;width: 100%;bottom: 20px;}
 
 .midCol.borderBox {position: relative;}
+.login-button:hover{
+    background: #14FD41;
+}
 .profile-button {
     background: #14FD41;
     width: 80%;

@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react"
 import { useDispatch, useSelector } from "react-redux"
 import { useNavigate } from "react-router-dom"
 import { loginUser } from "../../actions/UserActions"
+import {UserLogin} from "../../actions/UserActions"
 
 import "./Login2.css"
 import RegisterPage from "./Register"
@@ -40,6 +41,7 @@ export const LoginPage: React.FC<any> = (props:any)=>{
     const login = async () => {
         await dispatch(
             loginUser({username, password}) as any
+
             //these are the states that were changed with handleChange
             //we need "as any" to make it so that the return type can be any type
         )
@@ -53,57 +55,25 @@ export const LoginPage: React.FC<any> = (props:any)=>{
     }, [appState])
 
     return(
-   
+      <div className="login">
 
-<div className="mt200"> 
+          <div className="text-container">
+              
+              <div className="input-container">
+                  <input type="text" name="username" placeholder="username" onChange={handleChange}/>
+              </div>
+              <div className="input-container">
+                  <input type="password" name="password" placeholder="password" onChange={handleChange}/>
+              </div>
 
-<div className="login-row"> 
-    <div className="smallCol">
+              <button className="login-button" onClick={login}> Friends Login!</button>
+          </div>
 
-    </div>
+          <div className="disclaimer">
+          </div>
 
-    <div className="midCol">
-    <div className="login--page mb25">
-<div className="login--form"><div className="row">
-  
-  <div className="column2">
-
-    <br>
-    </br>
-
-    <div className="input-container">
-      <input type="text" name="username" className="input--field" placeholder="username"  />
       </div>
-
-      <div className="input-container">
-        <input type="password" className="input--field" name="password" placeholder="password"  />
-      </div>
-  
-      <button className="login-button" >Friends Login!</button>
-    </div>
-  </div>
-  </div>
-  </div>
-  
-  <div className="disclaimer">
-      
-    </div>
-  
-    
-  
-    <RegisterPage />
-  </div>
-      <div className="smallCol">
-  
-  </div>
-    </div>
-  
-  
-  
-  </div>
-
-)
-
+  )
     
 }
 

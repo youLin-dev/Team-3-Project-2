@@ -1,24 +1,14 @@
-/*.login {
-    width: stretch;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    border-radius: 5px;
-    border: 2px ;
-    padding: 20px;
-}*/
+/*.login {background-image: url ("../public/irisBackground11.PNG");
 
-body {
-    background-image: url("");
-  
-   background-attachment: fixed;
-   background-repeat: no-repeat;
-   background-position: 0px -23px;
-   background-size: cover;
-   padding: 0;
-    margin: 0px;
-  
-  }
+ background-attachment: fixed;
+ background-repeat: no-repeat;
+ background-position: 0px -23px;
+ background-size: cover;
+ padding: 0;
+  margin: 0px;
+
+}
+*/
 
 .text-container {
     text-align: center;
@@ -31,7 +21,8 @@ body {
 }
  
 .mt200{margin-top: 210px;}
-input.input--field {background: #F4F7F5;border: 0px;width: 76%;min-height: 25px;margin: 5px 0;padding: 3px 5px;border-radius: 8px;}
+input.input--field {background: #F4F7F5;border: 0px;width: 76%;min-height: 25px;
+    margin: 5px 0;padding: 3px 5px;border-radius: 8px;}
 .mb25{margin-bottom: 25px;}
 .login-button:hover{
     background: #76bc75;
@@ -53,7 +44,7 @@ input.input--field {background: #F4F7F5;border: 0px;width: 76%;min-height: 25px;
 }
 .register-button {
     background: #14FD41;
-    width: 80%;
+    width: 20%;
     border-color: #fff;
     font-weight: bold;
     border: 3px;
