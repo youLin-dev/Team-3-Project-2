@@ -34,11 +34,13 @@ export const LoginPage: React.FC<any> = (props:any)=>{
             console.log(username) //to show useState working
         } else {
             setPassword(e.target.value) //otherwise, set the password with that value.
+            console.log(password)
         }
     }
     //LOGIN functionality. we take the state objects and send them to the userLogin Action
     //sending /dispatching the data
     const login = async () => {
+        console.log("login")
         await dispatch(
             loginUser({username, password}) as any
 
@@ -55,6 +57,34 @@ export const LoginPage: React.FC<any> = (props:any)=>{
     }, [appState])
 
     return(
+<<<<<<< HEAD
+        <div className="login">
+
+            <div className="text-container">
+                
+                <h3>Please sign in</h3>
+
+                <div className="input-container">
+                    <input type="text" name="username" placeholder="username" onChange={handleChange}/>
+                </div>
+                <div className="input-container">
+                    <input type="password" name="password" placeholder="password" onChange={handleChange}/>
+                </div>
+                <div className="container">
+                    <button className="login-button" onClick={login}>Login</button>
+                </div>
+            </div>
+                
+
+            <div className="disclaimer">
+                <p>PokeMart© and its affiliates do not condone the misuse or mistreatment of pokemon</p>
+            </div>
+
+        </div>
+    )
+
+
+=======
       <div className="login">
 
           <div className="text-container">
@@ -74,8 +104,13 @@ export const LoginPage: React.FC<any> = (props:any)=>{
 
       </div>
   )
+>>>>>>> 5a4109b2063397c46bcc718a371f533157b35689
     
 }
+export default LoginPage;
 
-//export default LoginPage;
+/*
 
+
+)
+}*/

@@ -37,6 +37,17 @@ const initialState:AppState = {
             byMe: false
         }]
     },
+    
+    members: {
+        m:[
+            {
+                username: "",
+                firstName: "",
+                lastName: "",
+                phoneNumber: ""
+            }
+        ]
+    }
     //message: 
 }
 
