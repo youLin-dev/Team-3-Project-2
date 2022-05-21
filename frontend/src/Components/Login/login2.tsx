@@ -43,6 +43,7 @@ export const LoginPage: React.FC<any> = (props:any)=>{
         console.log("login")
         await dispatch(
             loginUser({username, password}) as any
+
             //these are the states that were changed with handleChange
             //we need "as any" to make it so that the return type can be any type
         )
@@ -56,6 +57,7 @@ export const LoginPage: React.FC<any> = (props:any)=>{
     }, [appState])
 
     return(
+<<<<<<< HEAD
         <div className="login">
 
             <div className="text-container">
@@ -82,6 +84,27 @@ export const LoginPage: React.FC<any> = (props:any)=>{
     )
 
 
+=======
+      <div className="login">
+
+          <div className="text-container">
+              
+              <div className="input-container">
+                  <input type="text" name="username" placeholder="username" onChange={handleChange}/>
+              </div>
+              <div className="input-container">
+                  <input type="password" name="password" placeholder="password" onChange={handleChange}/>
+              </div>
+
+              <button className="login-button" onClick={login}> Friends Login!</button>
+          </div>
+
+          <div className="disclaimer">
+          </div>
+
+      </div>
+  )
+>>>>>>> 5a4109b2063397c46bcc718a371f533157b35689
     
 }
 export default LoginPage;
