@@ -1,0 +1,19 @@
+package com.revature.services;
+
+import java.util.ArrayList;
+
+import com.revature.daos.MessageDao;
+import com.revature.models.Message;
+
+public class MessageService {
+
+	MessageDao mDAO = new MessageDao();
+	
+	public ArrayList<Message> getMessages() {
+		
+		ArrayList<Message> messages = mDAO.getMessages();
+		
+		return messages;
+	}
+	
+}

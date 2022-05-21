@@ -1,6 +1,7 @@
 package com.revature;
 
 import com.revature.controller.AuthController;
+import com.revature.controller.MessageController;
 
 import io.javalin.Javalin;
 
@@ -8,6 +9,8 @@ public class Launcher {
 	public static void main(String[] args) {
 		
 		AuthController ac = new AuthController();
+		
+		MessageController mc = new MessageController();
 		
 		Javalin app = Javalin.create(
 				config -> { 
@@ -19,6 +22,11 @@ public class Launcher {
 		
 		app.post("/login", ac.loginHandler);
 		
+		app.post("/message", mc.getMessageHandler);
+		
 		
 	}//https://github.com/YouLin968/Team-3-Project-2.git
 }
+
+
+//Get Members
