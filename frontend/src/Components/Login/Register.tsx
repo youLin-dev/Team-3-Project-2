@@ -24,7 +24,7 @@ return(
       <input type="password" className="input--field" name="password" placeholder="password" /*onChange={handleChange}*/ />
     </div>
 
-    <button className="register-button" >Create/Edit Profile</button>
+    <button className="register-button" >Submit</button>
   </div>
 </div>
 </div>
