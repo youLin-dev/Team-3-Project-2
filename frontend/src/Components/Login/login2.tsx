@@ -74,9 +74,9 @@ export const LoginPage: React.FC<any> = (props:any)=>{
                 </div>
                 <br>
                 </br>
-                <h3>Register/Edit Profile</h3>
+                    <h3>Register/Edit Profile</h3>
                 <div>
-                    <RegisterPage />
+                     <RegisterPage />
                  </div>
                 </div>
             

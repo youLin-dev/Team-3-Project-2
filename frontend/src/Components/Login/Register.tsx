@@ -17,8 +17,13 @@ return(
     <div className="input-container">
       <input type="text" name="lastname" className="input--field" placeholder="Last Name" /*onChange={handleChange}*/ />
     </div>
+    
     <div className="input-container">
-      <input type="text" name="username" className="input--field" placeholder="Email" /*onChange={handleChange}*/ />
+      <input type="text" name="phone" className="input--field" placeholder="Phone" /*onChange={handleChange}*/ />
+    </div>
+
+    <div className="input-container">
+      <input type="text" name="username" className="input--field" placeholder="Username" /*onChange={handleChange}*/ />
     </div>
     <div className="input-container">
       <input type="password" className="input--field" name="password" placeholder="password" /*onChange={handleChange}*/ />

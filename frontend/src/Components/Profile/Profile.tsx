@@ -15,6 +15,8 @@ export const ProfilePage: React.FC<any> = (props:any)=>{
 return(
 <div className="profile mb130"> 
     <div className="smallCol">
+
+
            <div className="sidebar--menu">
             <Link className="link--btn" to="/">Home</Link>
             <Link className="link--btn" to="/">Edit Profile</Link>
@@ -41,7 +43,7 @@ return(
             <img src={userImage}/>
             </span>
             <span>
-               Username
+               <div className= "text"> Username </div>
                </span> 
         </div>
     </div>
