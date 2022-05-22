@@ -1,0 +1,21 @@
+package com.revature.services;
+
+import java.util.List;
+
+import com.revature.daos.MemberDao;
+import com.revature.models.Member;
+
+public class MemberService {
+
+	MemberDao mbDAO = new MemberDao();
+	
+	public List<Member> getMembers(int messageId) {
+		
+		List<Member> members = mDAO.getMembersbyChat(uDAO.getUserById(userId), cDAO.getChatById(chatId(1));
+		
+		
+		return members;
+		
+	}
+	
+}
