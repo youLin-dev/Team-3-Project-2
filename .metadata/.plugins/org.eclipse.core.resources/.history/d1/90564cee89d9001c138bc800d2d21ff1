@@ -17,7 +17,7 @@ public class MemberService {
 	
 	public List<Member> getMembers(int memberId) {
 		
-		List<Member> members = mbDAO.getMembersbyChat(uDAO.getUserById(memberId), cDAO.getChatById(1));
+		List<Member> members = mbDAO.getMembersbyChat(uDAO.getUserById(userId), cDAO.getChatById(chatId(1));
 		
 		
 		return members;
