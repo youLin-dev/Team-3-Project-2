@@ -70,13 +70,22 @@ export const LoginPage: React.FC<any> = (props:any)=>{
                     <input type="password" name="password" placeholder="password" onChange={handleChange}/>
                 </div>
                 <div className="container">
-                    <button className="login-button" onClick={login}>Login</button>
+                    <button className="login-button" onClick={login}>Chat Now</button>
                 </div>
-            </div>
-                
-
+                <br>
+                </br>
+                    <h3>Register/Edit Profile</h3>
+                <div>
+                     <RegisterPage />
+                 </div>
+                </div>
+            
             <div className="disclaimer">
+<<<<<<< HEAD
                 
+=======
+                <p></p>
+>>>>>>> 67186c27e1d6b2029970347628ee92a1c712d14d
             </div>
 
         </div>

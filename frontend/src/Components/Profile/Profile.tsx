@@ -58,6 +58,8 @@ export const ProfilePage: React.FC<any> = (props:any)=>{
 return(
 <div className="profile mb130"> 
     <div className="smallCol">
+
+
            <div className="sidebar--menu">
 
             <Link className="link--btn" to="/" onClick={logout}>Logout</Link>
@@ -85,10 +87,15 @@ return(
             <img src={userImage}/>
             </span>
             <span>
+<<<<<<< HEAD
                Chat Members:  
             </span> 
             <button  id="rf" className="member-button" value="rf" onClick={refreshMembers}>Refresh</button>
             <DisplayMembers/>
+=======
+               <div className= "text"> Username </div>
+               </span> 
+>>>>>>> 67186c27e1d6b2029970347628ee92a1c712d14d
         </div>
     </div>
     
