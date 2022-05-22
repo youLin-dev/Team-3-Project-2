@@ -3,6 +3,7 @@ package com.revature;
 import com.revature.controller.AuthController;
 import com.revature.controller.MemberController;
 import com.revature.controller.MessageController;
+import com.revature.daos.UserDao;
 
 import io.javalin.Javalin;
 
@@ -26,6 +27,8 @@ public class Launcher {
 		app.post("/login", ac.loginHandler);
 		
 		app.post("/message", mc.getMessageHandler);
+		UserDao ud = new UserDao();
+		ud.getUserById(1);
 		
 		app.post("/member", mbc.getMemberHandler);
 		

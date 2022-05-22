@@ -27,7 +27,7 @@ public class Message {
 	private String time_sent;
 	
 	
-	private boolean owned;
+	private boolean owned = false;
 	
 	@ManyToOne(fetch = FetchType.EAGER, cascade=CascadeType.ALL)
 	@JoinColumn(name = "chat_id")
