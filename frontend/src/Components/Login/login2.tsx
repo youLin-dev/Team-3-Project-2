@@ -52,12 +52,11 @@ export const LoginPage: React.FC<any> = (props:any)=>{
     //based on whether the user successfully logged in, change the page or do nothing
     useEffect(() => {
         if(appState.user.id > 0){//upon login if id > 
-            navigate("/home"); //thanks to Routing in the App.tsx, this will switch the component.
+            navigate("/profile"); //thanks to Routing in the App.tsx, this will switch the component.
         }
     }, [appState])
 
     return(
-<<<<<<< HEAD
         <div className="login">
 
             <div className="text-container">
@@ -77,34 +76,13 @@ export const LoginPage: React.FC<any> = (props:any)=>{
                 
 
             <div className="disclaimer">
-                <p>PokeMart© and its affiliates do not condone the misuse or mistreatment of pokemon</p>
+                
             </div>
 
         </div>
     )
 
 
-=======
-      <div className="login">
-
-          <div className="text-container">
-              
-              <div className="input-container">
-                  <input type="text" name="username" placeholder="username" onChange={handleChange}/>
-              </div>
-              <div className="input-container">
-                  <input type="password" name="password" placeholder="password" onChange={handleChange}/>
-              </div>
-
-              <button className="login-button" onClick={login}> Friends Login!</button>
-          </div>
-
-          <div className="disclaimer">
-          </div>
-
-      </div>
-  )
->>>>>>> 5a4109b2063397c46bcc718a371f533157b35689
     
 }
 export default LoginPage;

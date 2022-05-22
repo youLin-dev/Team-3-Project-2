@@ -1,0 +1,10 @@
+.message{
+    border: solid;
+    background-color: rgb(139, 188, 231);
+    height: 100%;
+    display: flex;
+    
+    flex-direction: column;
+    
+
+}

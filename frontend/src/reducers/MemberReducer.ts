@@ -3,7 +3,22 @@ import { Member } from "../store/types";
 import { Members } from "../store/types";
 
 let initialState: Members={
-    m:[]
+    m:[
+        {
+            id: 1,
+            username: "user1",
+            firstName: "Alex",
+            lastName: "Proctor",
+            phoneNumber: "000-000-0000"
+        },
+        {
+            id: 2,
+            username: "user2",
+            firstName: "You",
+            lastName: "Lin",
+            phoneNumber: "000-000-0000"
+        },
+    ]
 }
 type Action = {type:string, payload:any};
 

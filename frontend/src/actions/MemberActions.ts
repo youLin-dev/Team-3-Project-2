@@ -1,41 +1,43 @@
 import axios from "axios";
 import { Member } from "../store/types";
 import { Members } from "../store/types";
-import { GET_MEMBERS } from "./actionTypes";
+import { GET_MEMBERS, GET_MESSAGES } from "./actionTypes";
 import { User } from "../store/types";
 import { useSelector } from "react-redux";
 
-const appState = useSelector<any, any>((state) => state);
+
 interface ID{
     id: string
 }
 type t = {
     i:ID
 }
-export const getMembers = ({}) => async (dispatch:any) =>{
+export const getMembers = (I:any) => async (dispatch:any) =>{
     let memsRecieved:Members;
     let formattedArray:Member[];
-    
+    //const appState = useSelector<any, any>((state) => state);
     try{
         const s:t={
             i: {
-                id:appState.user.user_id.string
+                id: I
             }
         }
         
-        const r = await axios.post('http://localhost:9000/getMembers', s.i);
+        const r = await axios.post('http://localhost:9000/member', String(I));
         if(r.status === 200){
             console.log(r);
             formattedArray = [];
-            const mem = r.data.members;
+            const mem = r.data;
             for(const j of mem){
                 const formattedMember={
-                    username: mem.user_fk.username,
-                    firstName: mem.user_fk.first_name,
-                    lastName: mem.user_fk.last_name,
-                    phoneNumber: mem.user_fk.phone_number
-                }
-                formattedArray.push(formattedMember)
+                    id: j.member_id,
+                    username: j.user_fk.username,
+                    firstName: j.user_fk.first_name,
+                    lastName: j.user_fk.last_name,
+                    phoneNumber: j.user_fk.phone_number
+                };
+                console.log(formattedMember);
+                formattedArray.push(formattedMember);
             }
             console.log(formattedArray);
             memsRecieved = {m: formattedArray}
@@ -45,6 +47,7 @@ export const getMembers = ({}) => async (dispatch:any) =>{
             })
         }
     }catch(e){
-        console.log("failed to get members")
+        console.log(e)
+        
     }
 }

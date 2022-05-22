@@ -29,7 +29,8 @@ export type AppState = {
 }
 
 export interface Message {
-
+        id: number;
+        senderName: string;
         messageText: string;
         sentDateTime: string;
         byMe: boolean;
@@ -42,6 +43,7 @@ export interface Messages{
 }
 
 export interface Member{
+    id: number;
     username: string;
     firstName: string;
     lastName: string;

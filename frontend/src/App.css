@@ -2,8 +2,8 @@ body {
   background-image: url("../public/irisBackground11.PNG");
 
  background-attachment: fixed;
- background-repeat: no-repeat;
- background-position: 0px -23px;
+ background-repeat: repeat-y;
+ background-position: center center;
  background-size: cover;
  padding: 0;
   margin: 0px;
