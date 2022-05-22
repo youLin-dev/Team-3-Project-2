@@ -1,5 +1,5 @@
 
-import { LOGIN_USER } from "../actions/actionTypes";
+import { LOGIN_USER, LOGOUT } from "../actions/actionTypes";
 import { User } from "../store/types";
 
 let initialState: User = {
@@ -30,10 +30,23 @@ export const userReducer = (state:User = initialState, action: Action) => {
             return {
                 ...initialState//return that object so it can be reused in the view
             }
-            default:
-                return state
+        case LOGOUT:
+            initialState = {
+                id: 0,
+                username: "",
+                password: "",
+                firstName: "",
+                lastName: "",
+                phoneNumber: ""
+            }
+            console.log(initialState)
+            return {
+                ...initialState//return that object so it can be reused in the view
+            }
+        default:
+            return state
             
                
-            }
+        }
     }
 

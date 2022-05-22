@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react"
 import { useDispatch, useSelector } from "react-redux"
 import { useNavigate } from "react-router-dom"
 import { loginUser } from "../../actions/UserActions"
+import {UserLogin} from "../../actions/UserActions"
 
 import "./Login2.css"
 import RegisterPage from "./Register"
@@ -33,13 +34,16 @@ export const LoginPage: React.FC<any> = (props:any)=>{
             console.log(username) //to show useState working
         } else {
             setPassword(e.target.value) //otherwise, set the password with that value.
+            console.log(password)
         }
     }
     //LOGIN functionality. we take the state objects and send them to the userLogin Action
     //sending /dispatching the data
     const login = async () => {
+        console.log("login")
         await dispatch(
             loginUser({username, password}) as any
+
             //these are the states that were changed with handleChange
             //we need "as any" to make it so that the return type can be any type
         )
@@ -48,64 +52,52 @@ export const LoginPage: React.FC<any> = (props:any)=>{
     //based on whether the user successfully logged in, change the page or do nothing
     useEffect(() => {
         if(appState.user.id > 0){//upon login if id > 
-            navigate("/home"); //thanks to Routing in the App.tsx, this will switch the component.
+            navigate("/profile"); //thanks to Routing in the App.tsx, this will switch the component.
         }
     }, [appState])
 
     return(
-   
+        <div className="login">
 
-<div className="mt200"> 
+            <div className="text-container">
+                
+                <h3>Please sign in</h3>
 
-<div className="login-row"> 
-    <div className="smallCol">
+                <div className="input-container">
+                    <input type="text" name="username" placeholder="username" onChange={handleChange}/>
+                </div>
+                <div className="input-container">
+                    <input type="password" name="password" placeholder="password" onChange={handleChange}/>
+                </div>
+                <div className="container">
+                    <button className="login-button" onClick={login}>Chat Now</button>
+                </div>
+                <br>
+                </br>
+                    <h3>Register/Edit Profile</h3>
+                <div>
+                     <RegisterPage />
+                 </div>
+                </div>
+            
+            <div className="disclaimer">
+<<<<<<< HEAD
+                
+=======
+                <p></p>
+>>>>>>> 67186c27e1d6b2029970347628ee92a1c712d14d
+            </div>
 
-    </div>
+        </div>
+    )
 
-    <div className="midCol">
-    <div className="login--page mb25">
-<div className="login--form"><div className="row">
-  
-  <div className="column2">
-
-    <br>
-    </br>
-
-    <div className="input-container">
-      <input type="text" name="username" className="input--field" placeholder="username"  />
-      </div>
-
-      <div className="input-container">
-        <input type="password" className="input--field" name="password" placeholder="password"  />
-      </div>
-  
-      <button className="login-button" >Friends Login!</button>
-    </div>
-  </div>
-  </div>
-  </div>
-  
-  <div className="disclaimer">
-      
-    </div>
-  
-    
-  
-    <RegisterPage />
-  </div>
-      <div className="smallCol">
-  
-  </div>
-    </div>
-  
-  
-  
-  </div>
-
-)
 
     
 }
+export default LoginPage;
 
-//export default LoginPage;
+/*
 
+
+)
+}*/

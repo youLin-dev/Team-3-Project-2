@@ -2,8 +2,8 @@
 .profile{
     display: flex;
     flex-wrap: wrap;
-    background: #f3efef;
-    height: calc(100vh - 30px);
+    background: #f8f6f6;
+    height: calc(98vh - 30px);
 }
 /*Make small cplumn width for main area */
 .smallCol{
@@ -23,22 +23,28 @@
 .sidebar--menu {margin-top: 40px;display: block;}
 
 /*set link look like a button and the link works on redirect to another page as well*/
-a.link--btn {display: block;border: 2px solid #205ac8;text-decoration: none;font-size: 18px;max-width: 190px;margin: 15px auto;padding: 10px 0;text-align: center;}
-span.userpic {display: block;text-align: center;margin-top: 12px;}
+a.link--btn {display: block;border: 2px solid #205ac8;text-decoration: none;font-size: 12px;
+    max-width: 170px;margin: 15px auto;padding: 10px 0;text-align: center;}
+span.userpic {display: block;text-align: center;margin-top: 15px;}
 
-span.userpic img {max-width: 150px;}
+span.userpic img {max-width: 100px;}
+span.text.username {text-align: center;}
 
 /*Chat box design*/
 .chatForm textarea {width: 80%;
     margin: 2px auto 0;
     display: block;
-    height: 54px;
+    height: 45px;
     border-radius: 8px;
 }
-
-.chatForm {position: absolute;width: 100%;bottom: 0px;}
+/*put message input at mb 20px*/
+.chatForm {position: absolute;width: 100%;bottom: 20px;}
 
 .midCol.borderBox {position: relative;}
+.login-button:hover{
+    background: #14FD41;
+}
+
 .profile-button {
     background: #14FD41;
     width: 80%;

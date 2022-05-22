@@ -24,11 +24,13 @@ export type AppState = {
     user: User,
     chatName: Chat,
     messages: Messages,
+    members: Members
     //message: Message
 }
 
 export interface Message {
-
+        id: number;
+        senderName: string;
         messageText: string;
         sentDateTime: string;
         byMe: boolean;
@@ -40,5 +42,15 @@ export interface Messages{
         m: Message[]
 }
 
+export interface Member{
+    id: number;
+    username: string;
+    firstName: string;
+    lastName: string;
+    phoneNumber: string;
+}
 
+export interface Members{
+    m: Member[]
+}
 //

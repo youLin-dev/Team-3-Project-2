@@ -28,15 +28,31 @@ const initialState:AppState = {
 
     messages: {
         m: [{
+            id: 0,
+            senderName:"Alex Proctor",
             messageText: "test message 1",
             sentDateTime: "",
             byMe: true
         }, {
+            id: 0,
+            senderName:"You Lin",
             messageText: "test message 2",
             sentDateTime: "",
             byMe: false
         }]
     },
+    
+    members: {
+        m:[
+            {
+                id:0,
+                username: "user1",
+                firstName: "f",
+                lastName: "p",
+                phoneNumber: "0"
+            },
+        ]
+    }
     //message: 
 }
 
