@@ -36,6 +36,12 @@ public class Message {
 	@ManyToOne(fetch = FetchType.EAGER, cascade=CascadeType.ALL)
 	@JoinColumn(name = "member_id")
 	private Member member_fk;
+	
+	
+	
+	public Message() {
+		super();
+	}
 
 	public Message(int message_id, String message_text, String time_sent, Chat chat_fk, Member member_fk) {
 		super();

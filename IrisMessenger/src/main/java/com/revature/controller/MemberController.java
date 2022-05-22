@@ -16,7 +16,7 @@ public class MemberController {
 		
 		String body = ctx.body();
         Gson gson = new Gson();
-        //System.out.println(body);
+        System.out.println("-- "+body);
         //IDDTO ID = gson.fromJson(body, IDDTO.class);
         int id = gson.fromJson(body, int.class);
         
@@ -25,7 +25,7 @@ public class MemberController {
         	List<Member> members = mbs.getMembers(id);
         	
         	String JSONMembers = gson.toJson(members);
-        	
+        	System.out.println(JSONMembers);
         	ctx.result(JSONMembers);
         	
         	ctx.status(200);
