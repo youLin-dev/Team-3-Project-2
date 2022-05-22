@@ -15,6 +15,7 @@
 		<!-- Hibernate Properties -->
 		<property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
 		<property name="hibernate.default_schema">iris</property>
+		<property name="connection.pool_size">100</property>
 		<!-- Hibernate console output -->
 		<property name="hibernate.show_sql">true</property>
 		<property name="hibernate.format_sql">true</property>
