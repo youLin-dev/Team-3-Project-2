@@ -24,13 +24,13 @@ public class Chat {
 	@Column
 	private String chat_name;
 	
-	@OneToMany(fetch = FetchType.EAGER, cascade=CascadeType.ALL)
-	@JoinColumn(name = "member_id")
-	private List<Member> member_fk;
+//	@OneToMany(fetch = FetchType.EAGER, cascade=CascadeType.ALL)
+//	@JoinColumn(name = "member_id")
+//	private List<Member> member_fk;
 	
-	@OneToMany(fetch = FetchType.EAGER, cascade=CascadeType.ALL)
-	@JoinColumn(name = "message_id")
-	private List<Message> message_fk;
+//	@OneToMany(fetch = FetchType.EAGER, cascade=CascadeType.ALL)
+//	@JoinColumn(name = "message_id")
+//	private List<Message> message_fk;
 	
 	public Chat() {
 		super();
@@ -40,8 +40,8 @@ public class Chat {
 		super();
 		this.chat_id = chat_id;
 		this.chat_name = name;
-		this.member_fk = member_fk;
-		this.message_fk = message_fk;
+//		this.member_fk = member_fk;
+//		this.message_fk = message_fk;
 	}
 
 	/**
@@ -70,25 +70,25 @@ public class Chat {
 		this.chat_name = name;
 	}
 
-	public List<Member> getMember_fk() {
-		return member_fk;
-	}
-
-	public void setMember_fk(List<Member> member_fk) {
-		this.member_fk = member_fk;
-	}
-
-	public List<Message> getMessage_fk() {
-		return message_fk;
-	}
-
-	public void setMessage_fk(List<Message> message_fk) {
-		this.message_fk = message_fk;
-	}
+//	public List<Member> getMember_fk() {
+//		return member_fk;
+//	}
+//
+//	public void setMember_fk(List<Member> member_fk) {
+//		this.member_fk = member_fk;
+//	}
+//
+//	public List<Message> getMessage_fk() {
+//		return message_fk;
+//	}
+//
+//	public void setMessage_fk(List<Message> message_fk) {
+//		this.message_fk = message_fk;
+//	}
 
 	@Override
 	public String toString() {
-		return "Chat [chat_id=" + chat_id + ", name=" + chat_name + ", member_fk=" + member_fk + "]";
+		return "Chat [chat_id=" + chat_id + ", name=" + chat_name + ", member_fk=" + "member_fk" + "]";
 	}
 	
 	
