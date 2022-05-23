@@ -18,14 +18,9 @@
 
 }
  
-<<<<<<< HEAD
-.mt200{margin-top: 210px;}
-input.input--field {background: #F4F7F5;border: 0px;width: 76%;min-height: 25px;margin: 5px 0;padding: 3px 5px;border-radius: 8px;}
-=======
 .mt200{margin-top: 200px;}
 input.input--field {background: #F4F7F5;border: 20px;width: 80%;min-height: 15px;
     margin: 1px 0;padding: 2.5px 6px;border-radius: 0px;}
->>>>>>> 67186c27e1d6b2029970347628ee92a1c712d14d
 .mb25{margin-bottom: 25px;}
 .login-button:hover{
     background: #76bc75;
@@ -47,11 +42,7 @@ input.input--field {background: #F4F7F5;border: 20px;width: 80%;min-height: 15px
 }
 .register-button {
     background: #14FD41;
-<<<<<<< HEAD
-    width: 80%;
-=======
     width: 115px;
->>>>>>> 67186c27e1d6b2029970347628ee92a1c712d14d
     border-color: #fff;
     font-weight: bold;
     border: 3px;

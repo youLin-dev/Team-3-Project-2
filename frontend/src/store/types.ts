@@ -5,7 +5,7 @@ import internal from "stream";
 
 //declare some types as interfaces
 export interface User {
-    id:0,
+    id: number,
     username: string;
     password: string;
     firstName: string;
@@ -14,7 +14,7 @@ export interface User {
 }
 
 export interface Chat { 
-    id:0,
+    id: number,
     chatName: string;  
 }
 
@@ -53,4 +53,6 @@ export interface Member{
 export interface Members{
     m: Member[]
 }
+
+
 //

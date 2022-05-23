@@ -15,7 +15,9 @@ type t = {
 export const getMessages = (I:number) => async (dispatch:any) =>{
     let memsRecieved:Messages;
     let formattedArray:Message[];
+    console.log(I);
     //const appState = useSelector<any, any>((state) => state);
+    
     try{
         
         

@@ -15,6 +15,7 @@ type t = {
 export const getMembers = (I:any) => async (dispatch:any) =>{
     let memsRecieved:Members;
     let formattedArray:Member[];
+    console.log(I);
     //const appState = useSelector<any, any>((state) => state);
     try{
         const s:t={
