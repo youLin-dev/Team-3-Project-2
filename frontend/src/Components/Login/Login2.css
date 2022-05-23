@@ -17,13 +17,20 @@
 .login-row {
     display: flex;
     flex-wrap: wrap;
-
 }
- 
+
+ /*Register fields..alias created to login page*/
 .mt200{margin-top: 200px;}
-input.input--field {background: #F4F7F5;border: 20px;width: 80%;min-height: 15px;
-    margin: 1px 0;padding: 2.5px 6px;border-radius: 0px;}
+input.input--field {
+    background: #F4F7F5;
+    border: 20px;
+    width: 80%;
+    min-height: 15px;
+    margin: 1px 0;
+    padding: 2.5px 6px;
+    border-radius: 0px;}
 .mb25{margin-bottom: 25px;}
+
 .login-button:hover{
     background: #76bc75;
 }
@@ -76,8 +83,6 @@ input.input--field {background: #F4F7F5;border: 20px;width: 80%;min-height: 15px
 .login{
     padding-top: 15%;
 }
-
-
 
 .login{
     padding-top: 15%;
