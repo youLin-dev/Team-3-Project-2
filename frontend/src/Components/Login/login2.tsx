@@ -81,11 +81,7 @@ export const LoginPage: React.FC<any> = (props:any)=>{
                 </div>
             
             <div className="disclaimer">
-<<<<<<< HEAD
                 
-=======
-                <p></p>
->>>>>>> 67186c27e1d6b2029970347628ee92a1c712d14d
             </div>
 
         </div>

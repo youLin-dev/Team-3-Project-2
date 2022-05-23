@@ -12,18 +12,21 @@ import { Chat } from "../Message/Chat";
 import { getMembers } from "../../actions/MemberActions";
 import { getMessages } from "../../actions/MessageActions";
 import { logOut } from "../../actions/LogoutAction";
+import { sendMessage } from "../../actions/SendActions";
 //import Chatbox from "../Message/ChatBox";
 //const ProfilePage = (props:any)=>{
  let timer: NodeJS.Timer | undefined;
 export const ProfilePage: React.FC<any> = (props:any)=>{ 
     const navigate = useNavigate();
     const dispatch = useDispatch();
+    const [message_text, setmess] = useState("");
+    const [user_id, setId] = useState(0);
     //const a = document.getElementById("rf").addEventListener("click", function (evt) { return refreshMembers(); });
     const appState = useSelector<any, any>((state) => state);
     let timer: any;
 
     const refreshChat =async () => {
-        console.log("refreshing mmembers")
+        console.log("refreshing chat")
         await dispatch(
             getMessages(appState.user.id) as any
         )
@@ -37,7 +40,7 @@ export const ProfilePage: React.FC<any> = (props:any)=>{
     }, [])
     
     const refreshMembers = async () => {
-        console.log("refreshing mmembers")
+        console.log("refreshing members")
         await dispatch(
             getMembers(appState.user.id) as any
         )
@@ -54,7 +57,31 @@ export const ProfilePage: React.FC<any> = (props:any)=>{
         console.log(appState.user)
         navigate("/");
     }
+    let [text,setText] = useState("")
+    const handleChange =async (e:any) => {
+        console.log(e.target.value)
+        setText(e.target.value)
+    }
+    
 
+    const send =async () => {
+        
+        setId(appState.user.id);
+        //console.log(user_id);
+        if(appState.user.id > 0){
+        await dispatch(
+            sendMessage({
+                user_id: appState.user.id, 
+                message_text: text
+            }) as any
+            
+        )
+        refreshChat()
+        }
+        //setVal("");
+    }
+    
+    //onChange={handleChange}  onClick={send}
 return(
 <div className="profile mb130"> 
     <div className="smallCol">
@@ -66,19 +93,19 @@ return(
             </div>
     </div>
     <div className="midCol borderBox">
-      <div>
+      <div className="chat-box">
           <Chat/>
       </div>
     
     <form>
         <div className="chatForm">
-            <div className="chatForm">
-                <textarea placeholder="Enter your message"></textarea>
-                <button className="profile-button" >Send !</button>
-            </div>
+            
+                <textarea placeholder="Enter your message"  onChange={handleChange}></textarea>
+                <Link id="s" className="profile-button" to="/Profile" onClick={send}>Send !</Link>
+            
         </div>
-  </form>
-
+    </form>
+ 
               
     </div>
     <div className="smallCol">
@@ -87,15 +114,10 @@ return(
             <img src={userImage}/>
             </span>
             <span>
-<<<<<<< HEAD
                Chat Members:  
             </span> 
-            <button  id="rf" className="member-button" value="rf" onClick={refreshMembers}>Refresh</button>
+            <button  id="rf" className="member-button"  onClick={refreshMembers}>Refresh</button>
             <DisplayMembers/>
-=======
-               <div className= "text"> Username </div>
-               </span> 
->>>>>>> 67186c27e1d6b2029970347628ee92a1c712d14d
         </div>
     </div>
     

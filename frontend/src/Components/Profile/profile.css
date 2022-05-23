@@ -46,15 +46,43 @@ span.text.username {text-align: center;}
 }
 
 .profile-button {
+    text-align: center;
+    text-decoration: none;
+    
     background: #14FD41;
+    
     width: 80%;
     border-color: #fff;
     font-weight: bold;
     border: 3px;
-    color: #38363F;
+    color: #020202;
     font-size: 18px;
     padding: 10px 2px;
     border-radius: 8px;
     margin: 5px auto 1px;
     display: block;
+}
+        /* width */        
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+  
+        /* Track */
+        ::-webkit-scrollbar-track {
+            background: rgb(128, 147, 231);
+        }
+  
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+            background: rgb(87, 90, 95);
+        }
+  
+        /* Handle on hover */
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+.chat-box{
+    height: 580px;
+    overflow-y: scroll;
+    border-bottom: solid;
 }
