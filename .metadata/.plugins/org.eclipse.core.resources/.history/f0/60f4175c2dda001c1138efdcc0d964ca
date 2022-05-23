@@ -1,0 +1,9 @@
+package com.revature.models;
+
+public class CreateMessageDTO {
+
+	int user_id ;
+	
+	String message_text;
+	
+}
