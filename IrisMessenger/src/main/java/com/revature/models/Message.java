@@ -11,6 +11,9 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
+import org.hibernate.annotations.Type;
+
+
 @Entity
 @Table(name = "messages")
 public class Message {
@@ -20,7 +23,8 @@ public class Message {
 	@Column 
 	private int message_id;
 	
-	@Column
+	@Column//(length = 1000)
+	@Type(type="text")
 	private String message_text;
 	
 	@Column
