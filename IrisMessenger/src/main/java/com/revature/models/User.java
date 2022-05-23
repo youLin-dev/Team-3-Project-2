@@ -17,31 +17,33 @@ import java.util.List;
 public class User {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column 
+	@Column
 	private int user_id;
-	
-	@Column(unique = true, nullable = false) 
+
+	@Column(unique = true, nullable = false)
 	private String username;
-	
+
 	@Column(nullable = false)
 	private String pass_word;
-	
+
 	@Column
 	private String first_name;
 	@Column
 	private String last_name;
 	@Column(unique = true, nullable = false, length = 12)
 	private String phone_number;
-	
-	@OneToMany(fetch = FetchType.EAGER, cascade=CascadeType.ALL)
-	@JoinColumn(name = "member_id")
-	private List<Member> member_fk;
-	
+
+	/*
+	 * @OneToMany(fetch = FetchType.EAGER, cascade=CascadeType.ALL)
+	 * 
+	 * @JoinColumn(name = "member_id") private List<Member> member_fk;
+	 */
+
 	public User() {
 		super();
 	}
 
-	//these methods will need to be regenerated if fields are eddited
+	// these methods will need to be regenerated if fields are eddited
 	public User(int user_id, String username, String pass_word, String first_name, String last_name,
 			String phone_number) {
 		super();
@@ -52,7 +54,7 @@ public class User {
 		this.last_name = last_name;
 		this.phone_number = phone_number;
 	}
-	
+
 	public User(int user_id, String username, String pass_word, String first_name, String last_name,
 			String phone_number, List<Member> member_fk) {
 		super();
@@ -62,7 +64,7 @@ public class User {
 		this.first_name = first_name;
 		this.last_name = last_name;
 		this.phone_number = phone_number;
-		this.member_fk = member_fk;
+		//this.member_fk = member_fk;
 	}
 
 	public User(String username, String pass_word, String first_name, String last_name, String phone_number) {
@@ -86,15 +88,14 @@ public class User {
 		return "User [user_id=" + user_id + ", username=" + username + ", pass_word=" + pass_word + ", first_name="
 				+ first_name + ", last_name=" + last_name + ", phone_number=" + phone_number + "]";
 	}
-	
-	
-	public List<Member> getMember_fk() {
-		return member_fk;
-	}
 
-	public void setMember_fk(List<Member> member_fk) {
-		this.member_fk = member_fk;
-	}
+//	public List<Member> getMember_fk() {
+//		return member_fk;
+//	}
+//
+//	public void setMember_fk(List<Member> member_fk) {
+//		this.member_fk = member_fk;
+//	}
 
 	public int getUser_id() {
 		return user_id;
@@ -143,8 +144,5 @@ public class User {
 	public void setPhone_number(String phone_number) {
 		this.phone_number = phone_number;
 	}
-	
-	
-	
-	
+
 }

@@ -27,7 +27,7 @@ public class Message {
 	private String time_sent;
 	
 	
-	private boolean owned;
+	private boolean owned = false;
 	
 	@ManyToOne(fetch = FetchType.EAGER, cascade=CascadeType.ALL)
 	@JoinColumn(name = "chat_id")
@@ -36,6 +36,12 @@ public class Message {
 	@ManyToOne(fetch = FetchType.EAGER, cascade=CascadeType.ALL)
 	@JoinColumn(name = "member_id")
 	private Member member_fk;
+	
+	
+	
+	public Message() {
+		super();
+	}
 
 	public Message(int message_id, String message_text, String time_sent, Chat chat_fk, Member member_fk) {
 		super();

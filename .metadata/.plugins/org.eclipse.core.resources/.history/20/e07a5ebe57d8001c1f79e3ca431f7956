@@ -1,0 +1,9 @@
+package com.revature.services;
+
+public class ChatService {
+
+	ChatDao cDAO = new ChatDao();
+	
+	public ArrayList<Chat> getChats()
+	
+}

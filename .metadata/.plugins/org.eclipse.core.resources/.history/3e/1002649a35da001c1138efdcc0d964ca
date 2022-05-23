@@ -1,0 +1,24 @@
+package com.revature.services;
+
+import com.revature.daos.ChatDao;
+import com.revature.daos.MemberDao;
+import com.revature.daos.MessageDao;
+import com.revature.daos.UserDao;
+import com.revature.models.CreateMessageDTO;
+import com.revature.models.Member;
+import com.revature.models.Message;
+
+public class CreateMessageService {
+
+	public void CreateMessage() {
+	
+	UserDao ud = new UserDao();
+    ChatDao cd = new ChatDao();
+    CreateMessageDTO cmDTO = new CreateMessageDTO();
+    MessageDao md = new MessageDao();
+    MemberDao memd = new MemberDao();
+    Member member = memd.getMemberbyUserAndChat(ud.getUserById(cmDTO.getUser_id()),cd.getChatById(1));
+    md.createMessage(new Message(cmDTO.getMessage_text(),"",cd.getChatById(1),member));
+    
+	}
+}
