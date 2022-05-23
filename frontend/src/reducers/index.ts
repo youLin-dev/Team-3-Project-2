@@ -2,12 +2,16 @@
 //a one stop shop for new data comingin that needs to be dispatched
 
 import { combineReducers } from "@reduxjs/toolkit";
+import { MemberReducer } from "./MemberReducer";
+import { MessageReducer } from "./MessageReducer";
 import { userReducer } from "./UserReducer";
 
 
 export default combineReducers({
 
     user:userReducer,
+    members:MemberReducer,
+    messages:MessageReducer,
    
 })
 

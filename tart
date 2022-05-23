@@ -1,0 +1,84 @@
+[33mcommit 53c2549739fb282265ec4756582893dd89989ba5[m[33m ([m[1;36mHEAD -> [m[1;32mFrontend[m[33m)[m
+Author: Terrell Banks <gtbanks@gmail.com>
+Date:   Thu May 19 11:38:51 2022 -0700
+
+    FE work...fixed Store bugs..login still not compiling.
+
+[33mcommit 89dc96dbb72eb202d74068ad1f9d72a1689826ca[m
+Author: Terrell Banks <gtbanks@gmail.com>
+Date:   Wed May 18 18:13:01 2022 -0700
+
+    worked on home and store components...login/reg form not rendering.
+
+[33mcommit 38e088296124f319304583810e9aee7148153abf[m
+Author: Terrell Banks <gtbanks@gmail.com>
+Date:   Tue May 17 09:57:03 2022 -0700
+
+    rendered basic profile and message page...must redo home component.
+
+[33mcommit 3fb5243087e9857ebd8f36b8a473a1c8a12d400b[m[33m ([m[1;31morigin/Frontend[m[33m)[m
+Author: Terrell Banks <gtbanks@gmail.com>
+Date:   Sun May 15 06:56:29 2022 -0700
+
+    Add FE branch w/React worked on login and components.
+
+[33mcommit 53b9c05a4c3e6e809f2010ac499b15a354dc6a85[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmain[m[33m)[m
+Merge: 25c080c 4ff9287
+Author: TimothyProctor25 <102239447+spaceraptor1@users.noreply.github.com>
+Date:   Fri May 13 15:28:09 2022 -0400
+
+    Merge pull request #1 from YouLin968/Alexs-hibernate-branch
+    
+    Alexs hibernate branch
+
+[33mcommit 4ff9287fad1bef113f3b67179c26e64d76789ce1[m
+Author: Alex Proctor <taproctor00@gmail.com>
+Date:   Fri May 13 13:06:32 2022 -0400
+
+    fixed config and added fields in user to match contact table
+
+[33mcommit c63d1ba619433314b2011cc68a02b702b9f07ec3[m
+Author: Alex Proctor <taproctor00@gmail.com>
+Date:   Thu May 12 19:24:35 2022 -0400
+
+    created User and UserDAO using hibernate
+
+[33mcommit 25c080cff3c86ff2461149179073bd7e63e81071[m
+Author: You Lin <102980815+YouLin968@users.noreply.github.com>
+Date:   Wed May 11 23:01:45 2022 -0400
+
+    Update README.md
+    
+    Included project description and requirement in readme file.
+
+[33mcommit 13ef551c43531dfea50e1942ea015c085f91773c[m
+Author: You Lin <youlin404@gmail.com>
+Date:   Wed May 11 22:56:32 2022 -0400
+
+    SQL database framework messenger script
+
+[33mcommit 0bfd98dc3e159fc5000efb8b12b6cf97b271d567[m
+Author: YouLin968 <102980815+YouLin968@users.noreply.github.com>
+Date:   Wed May 11 20:04:46 2022 -0400
+
+    Delete login.html
+    
+    testing branch merging
+
+[33mcommit b36fd354197f65a8cba1258fed53f6a92e6b6479[m
+Author: You Lin <youlin404@gmail.com>
+Date:   Wed May 11 19:50:58 2022 -0400
+
+    add login form
+
+[33mcommit 2c5c7c6e08d670b51a4a9a68f2620c9664ddf918[m
+Author: Alex Proctor <taproctor00@gmail.com>
+Date:   Wed May 11 17:37:13 2022 -0400
+
+    Created maven project
+
+[33mcommit 33ba283f81b5eabffb1f0e67e60016aa14bcea7e[m
+Author: YouLin968 <102980815+YouLin968@users.noreply.github.com>
+Date:   Wed May 11 14:34:58 2022 -0400
+
+    Initial commit
